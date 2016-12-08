@@ -16,7 +16,7 @@ Please visit our wiki for furthur project info:
 
 ### [Team Page](https://github.com/chagitniss/nigun/wiki/Team)
 
-![](../../blob/master/IMGs_Paleta/team.jpg)
+![](http://joshuareich.org/wp-content/uploads/2014/10/book4.jpg)
 
 ### Project Documents
 - [Project Idea](https://github.com/chagitniss/nigun/blob/master/%D7%A0%D7%99%D7%92%D7%95%D7%9F.pptx)
