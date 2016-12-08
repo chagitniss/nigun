@@ -18,7 +18,7 @@ Please visit our wiki for furthur project info:
 
 
 ### Project Documents
-- [Project Idea]https://github.com/chagitniss/nigun/blob/master/%D7%A0%D7%99%D7%92%D7%95%D7%9F.pptx)
+- [Project Idea](https://github.com/chagitniss/nigun/blob/master/%D7%A0%D7%99%D7%92%D7%95%D7%9F.pptx)
 - [Project Inception & Planing](https://github.com/chagitniss/nigun/wiki/Inception---Planing)
 - [Software Requirements Specification](https://github.com/chagitniss/nigun/wiki/SRS)
 - [Software Design Specification](https://github.com/chagitniss/nigun/wiki/SDS)
