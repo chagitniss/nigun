@@ -3,6 +3,9 @@
 ### Website for promoting the issue of Jewish music on the network.
 ##Pleas visit our [live aplication]()
 
+## Our chat
+[![Join the chat at https://gitter.im/jce-il-se-class-2017a-nigun/Lobby?source=orgpage](https://gitter.im/jce-il-se-class-2017a-nigun/Lobby?source=orgpage)](https://gitter.im/jce-il-se-class-2017a-nigun/Lobby?source=orgpage)
+
 ## [out chat](https://gitter.im/jce-il-se-class-2017a-nigun/Lobby?source=orgpage)
 
 ##[Issue Board](https://github.com/chagitniss/nigun/projects/1)
