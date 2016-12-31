@@ -1,0 +1,83 @@
+body {
+    background-color: black;
+    direction: rtl;
+}
+#guitarTuning {
+    background-color: white;
+    height: 500px;
+}
+
+
+.guitar {
+    z-index: 10;
+    position: relative;
+    margin-top: 7%;
+    width: 50px;
+    height: 50px;
+    text-align: center;
+    background: #800000;
+    font-size: 30px;
+    line-height: 50px;
+    border-radius: 10px;
+    cursor: pointer;
+    margin: 0 auto;
+    color: #9d9d9d;
+}
+
+.row1 {
+    height: 2px;
+    position: relative;
+    bottom: 27px;
+    margin: 0 auto;
+    background: #9d9d9d;
+    cursor: pointer;
+}
+
+.row2 {
+    height: 3px;
+    position: relative;
+    bottom: 30px;
+    margin: 0 auto;
+    background: #9d9d9d;
+    cursor: pointer;
+}
+
+.row3 {
+    height: 4px;
+    position: relative;
+    bottom: 30px;
+    margin: 0 auto;
+    background: #9d9d9d;
+    cursor: pointer;
+}
+
+.row4 {
+    height: 5px;
+    position: relative;
+    bottom: 30px;
+    margin: 0 auto;
+    background: #9d9d9d;
+    cursor: pointer;
+}
+
+.row5 {
+    height: 6px;
+    position: relative;
+    bottom: 30px;
+    margin: 0 auto;
+    background: #9d9d9d;
+    cursor: pointer;
+}
+
+.row6 {
+    height: 7px;
+    position: relative;
+    bottom: 30px;
+    margin: 0 auto;
+    background: #9d9d9d;
+    cursor: pointer;
+}
+
+.guitarString {
+    margin-top: 5%;
+}
