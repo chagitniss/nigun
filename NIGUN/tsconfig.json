@@ -1,0 +1,4 @@
+{
+  "connectionString": "mongodb://<dbuser>:<dbpassword>@ds046549.mlab.com:46549/nigun",
+  "apiUrl": "http://localhost:3000/api"
+}

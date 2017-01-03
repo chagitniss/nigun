@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="he">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="http://www.w3schools.com/lib/w3.css">
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+
+
+    <link href="css/homeStyle.css" rel="stylesheet" media="screen">
+    <link href="css/chordsStyle.css" rel="stylesheet" media="screen">
+    <link href="css/contactStyle.css" rel="stylesheet" media="screen">
+    <link href="css/GuitarTuningStyle.css" rel="stylesheet" media="screen">
+    <link href="css/dictionaryStyle.css" rel="stylesheet" media="screen">
+    <link href="css/songStyle.css" rel="stylesheet" media="screen">
+
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+    <script src="src/angular.js"></script>
+    <script src="src/angular-route.js"></script>
+    <script src="src/angular-mocks.js"></script>
+    <script src="src/jquery-2.2.3.min.js"></script>
+    <script src="src/jquery-2.2.3.js"></script>
+    <script src="src/bootstrap.min.js"></script>
+    <script src="src/jquery.js"></script>
+
+    <script src="controllers/homeController.js"></script>
+    <script src="controllers/indexController.js"></script>
+
+
+    <script src="app.js"></script>
+
+    <title>NIGUN</title>
+
+</head>
+
+<body ng-app="myApp">
+
+<!--div class="jumbotron text-center">
+</div-->
+
+<div id = "top" class="navbar navbar-inverse ">
+    <div class = "container-fluid">
+        <div class="row">
+
+            <div id = "login" class="col-lg-3 col-sm-12 col-xs-12">
+                <div class="navbar-collapse collapse list-inline" style="text-align:left">
+                    <ul class="nav navbar-nav navbar-left  list-inline">
+                        <li><a class="btn  btn-xs" ng-href="#login" id="loginLink">התחברות</a></li>
+                        <li><a class="btn  btn-xs" href="/%D7%94%D7%A8%D7%A9%D7%9E%D7%94" id="registerLink">הרשמה</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div id="HeaderLettersContainer" class="col-lg-7 col-md-12 col-sm-12 hidden-xs ">
+
+                <div id = "search" class="input-group" id="searchDiv">
+                    <input autocomplete="off" id="searchInput" name="id" type="text" class="form-control" placeholder="הקלד שם אמן או שיר" data-auto-complete-url="/Search/AutoComplete" data-search-url="/%D7%97%D7%99%D7%A4%D7%95%D7%A9" />
+                    <span class="input-group-btn  hidden-xs">
+                                        <button class="btn btn-default" type="submit">חפש</button>
+                                   </span>
+                </div>
+                </br></br>
+
+
+                <b> <a class = "char" href="">א</a>&nbsp&nbsp&nbsp
+                    <a class = "char" href="">ב</a>&nbsp&nbsp&nbsp
+                    <a class = "char" href="">ג</a>&nbsp&nbsp&nbsp
+                    <a class = "char" href="">ד</a>&nbsp&nbsp&nbsp
+                    <a class = "char" href="">ה</a>&nbsp&nbsp&nbsp
+                    <a class = "char" href="">ו</a>&nbsp&nbsp&nbsp
+                    <a class = "char" href="">ז</a>&nbsp&nbsp&nbsp
+                    <a class = "char" href="">ח</a>&nbsp&nbsp&nbsp
+                    <a class = "char" href="">ט</a>&nbsp&nbsp&nbsp
+                    <a class = "char" href="">י</a>&nbsp&nbsp&nbsp
+                    <a class = "char" href="">כ</a>&nbsp&nbsp&nbsp
+                    <a class = "char" href="">ל</a>&nbsp&nbsp&nbsp
+                    <a class = "char" href="">מ</a>&nbsp&nbsp&nbsp
+                    <a class = "char" href="">נ</a>&nbsp&nbsp&nbsp
+                    <a class = "char" href="">ס</a>&nbsp&nbsp&nbsp
+                    <a class = "char" href="">ע</a>&nbsp&nbsp&nbsp
+                    <a class = "char" href="">פ</a>&nbsp&nbsp&nbsp
+                    <a class = "char" href="">צ</a>&nbsp&nbsp&nbsp
+                    <a class = "char" href="">ק</a>&nbsp&nbsp&nbsp
+                    <a class = "char" href="">ר</a>&nbsp&nbsp&nbsp
+                    <a class = "char" href="">ש</a>&nbsp&nbsp&nbsp
+                    <a class = "char" href="">ת</a></b>
+            </div>
+
+            <div id = "headLogo" class="col-lg-2">
+                <a href="#"><img id="logo" src="img/logo.png"/></a>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+<nav class="navbar navbar-inverse top-nav ">
+    <div class="container-fluid">
+        <ul class="nav navbar-nav navbar-right nav-tabs nav-pills" role="tablist" >
+            <li ><a ng-href="#contact">צור קשר ></a></li>
+            <li><a href="#song">הוספת שיר ></a></li>
+            <li><a ng-href="#GuitarTuning">כיוון גיטרה ></a></li>
+            <li><a href="#dictionary">מילון אקורדים ></a></li>
+            <li><a ng-href="#chords">אקורדים לשירים ></a></li>
+            <li class="active1"><a ng-href="#home">דף הבית ></a></li>
+        </ul>
+    </div>
+</nav>
+
+
+
+            <div class="row">
+                <div ng-view></div>
+            </div>
+
+
+</div>
+</br>
+
+<footer class="container-fluid text-center">
+    <div class="col-lg-4">כל הזכויות שמורות לניגון בע"מ &copy; </div>
+    <div class="col-lg-4"><a href="privacy.html">מדיניות פרטיות</a></div>
+    <div class="col-lg-4"><a href="terms.html">תנאים כלליים</a></div>
+</footer>
+</body>
+</html>
