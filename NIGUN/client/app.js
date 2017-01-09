@@ -27,11 +27,18 @@ myApp.config(function($routeProvider){
             templateUrl: "views/dictionary.html",
             controller: "contactController"
         })
-        .when('/song', {
-            templateUrl: "views/song.html",
-            controller: "contactController"
+        .when('/artists', {
+            templateUrl: "views/artists.html",
+            controller: "artistsController"
         })
 
         .otherwise({redirectTo:'/home'});
 });
 
+
+
+//myApp.controller("artistsController", ["$scope", "$http", artistsController]);
+
+myApp.controller('artistsController', function ($scope) {
+    $scope.message = 'this is my artistsController';
+});

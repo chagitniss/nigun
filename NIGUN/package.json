@@ -29,7 +29,7 @@
     "jsonwebtoken": "^5.0.2",
     "lodash": "^3.10.0",
     "mongodb": "^2.1.16",
-    "mongoose": "^4.4.12",
+    "mongoose": "^4.7.6",
     "mongoskin": "^2.1.0",
     "multer": "^1.1.0",
     "q": "^1.4.1",

@@ -12,8 +12,12 @@ app.use(bodyParser.json()); //read json data
 
 
 app.use(express.static(__dirname+'/client'));
-// app.use('/app', express.static('app'));
+//app.use('/app', express.static('app'));
 
+
+////////////////////////////////////////////////////////////////////////////////
+app.use('/artistsController',require('./controllers/artistsServerController'));
+///////////////////////////////////////////////////////////////////////////////
 
 app.get('/',function (req, res) {
     res.sendFile(path.join(__dirname+'/client/index.html'));
