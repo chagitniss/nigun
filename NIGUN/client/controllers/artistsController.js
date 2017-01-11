@@ -1,11 +1,11 @@
-function artists($scope, $http){
+function artistsController($scope, $http){
 
     $scope.artists={};
     $scope.onLoad=onLoad;
     onLoad();
 console.log("in client ctrl");
     function onLoad(){
-        $http.get('/artists/loadArtists')
+        $http.get('artistsController/loadArtists')
             .success(function(data){
                 $scope.artists = data;
                 console.log("Succeed loading");
