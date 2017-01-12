@@ -31,6 +31,10 @@ myApp.config(function($routeProvider){
             templateUrl: "views/artists.html",
             controller: "artistsController"
         })
+        .when('/artists/:name', {
+            templateUrl: "views/artistShow.html",
+            controller: "artistsController"
+        })
 
         .otherwise({redirectTo:'/home'});
 });
@@ -39,6 +43,5 @@ myApp.config(function($routeProvider){
 
 //myApp.controller("artistsController", ["$scope", "$http", artistsController]);
 
-myApp.controller('artistsController', function ($scope) {
-    $scope.message = 'this is my artistsController';
-});
+
+myApp.controller("artistsController", ["$scope", "$http", artistsController]);
