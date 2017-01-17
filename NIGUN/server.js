@@ -17,6 +17,7 @@ app.use(express.static(__dirname+'/client'));
 
 ////////////////////////////////////////////////////////////////////////////////
 app.use('/artistsController',require('./controllers/artistsServerController'));
+app.use('/songsController',require('./controllers/songsServerController'));
 ///////////////////////////////////////////////////////////////////////////////
 
 app.get('/',function (req, res) {

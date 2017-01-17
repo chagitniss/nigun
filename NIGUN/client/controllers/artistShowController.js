@@ -9,11 +9,11 @@ function artistShowController($scope, $routeParams, $http){
 
 
     function onLoad(){
-        $http.get('artistsController/loadSongs/'+name)
+        $http.get('songsController/loadSongs/'+name)
             .success(function(data){
                 $scope.songs = data;
                 console.log("Succeed loading");
-                console.log(data.songs);
+                console.log(data);
             })
             .error(function(data){
                 console.log("Error: "+data);

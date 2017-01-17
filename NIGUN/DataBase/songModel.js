@@ -2,11 +2,11 @@
 var mongoose = require('mongoose');
 var Schema= mongoose.Schema;
 
-var artistSchema = new Schema({
+var songSchema = new Schema({
     id : String,
     name : String,
-    songs : Number,
-    img: String
+    artistsName: String,
+    chords: String
 });
 
-module.exports = artistSchema;
+module.exports = songSchema;
