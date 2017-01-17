@@ -33,15 +33,11 @@ myApp.config(function($routeProvider){
         })
         .when('/artists/:name', {
             templateUrl: "views/artistShow.html",
-            controller: "artistsController"
+            controller: "artistShowController"
         })
 
         .otherwise({redirectTo:'/home'});
 });
 
-
-
-//myApp.controller("artistsController", ["$scope", "$http", artistsController]);
-
-
 myApp.controller("artistsController", ["$scope", "$http", artistsController]);
+myApp.controller("artistShowController", ["$scope",  "$routeParams", "$http", artistShowController]);

@@ -17,22 +17,34 @@ var artistSchema = require('../DataBase/artistModel');
 var artistsList = mongoose.model('artists',artistSchema);
 
 artistsList.find({},function(err,artists){
-    console.log(artists);
+    //console.log(artists);
 });
 
 
 //routing
 
 router.get('/loadArtists', loadArtists);
+router.get('/loadSongs/:name', loadSongs);
+//router.get('/addBookToCart/:id', addBookToCart);
 
 module.exports = router;
 
 function loadArtists(req, res){
     //Getting all documents from artist collection and put in artists array
     artistsList.find({},function(err,artists){
-        console.log(artists);
+        //console.log(artists);
         res.json(artists);
     });
 }
+function loadSongs(req, res) {
+    //Getting all songs from artist collection and put in songs array
+    var name = req.params.name;
+    artistsList.findOne({'name': name},'songs', function (err, songs) {
+        if (err)
+            res.send(err);
+        console.log(songs);
+        res.json(songs); // return the songs in JSON format
+    });
 
+}
 
