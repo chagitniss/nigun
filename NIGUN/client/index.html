@@ -1,12 +1,11 @@
 <!DOCTYPE html>
 <html lang="he">
 <head>
-    <meta charset="UTF-8">
+    <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="http://www.w3schools.com/lib/w3.css">
 
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-
 
     <link href="css/homeStyle.css" rel="stylesheet" media="screen">
     <link href="css/contactStyle.css" rel="stylesheet" media="screen">
@@ -35,11 +34,9 @@
     <script src="controllers/artistsController.js"></script>
     <script src="controllers/artistShowController.js"></script>
 
-
     <script src="app.js"></script>
 
-    <title>NIGUN</title>
-
+    <title>ניגון</title>
 </head>
 
 <body ng-app="myApp">
@@ -47,11 +44,10 @@
 <!--div class="jumbotron text-center">
 </div-->
 
-<div id = "top" class="navbar navbar-inverse ">
+<div id = "top"><!--class="navbar navbar-inverse "-->
     <div class = "container-fluid">
         <div class="row">
-
-             <div id = "login" class="col-lg-3 col-sm-12 col-xs-12">
+             <div id = "login" class="col-lg-3 col-sm-3 col-xs-3 col-md-3">
                 <div class="navbar-collapse collapse list-inline" style="text-align:left">
                     <ul class="nav navbar-nav navbar-left  list-inline">
                         <li><a class="btn btn-danger btn-sm" ng-href="#login" id="loginLink">התחברות</a></li>
@@ -60,17 +56,14 @@
                 </div>
             </div>
 
-            <div id="HeaderLettersContainer" class="col-lg-7 col-md-12 col-sm-12 hidden-xs ">
-
+            <div id="HeaderLettersContainer" class="col-lg-7 col-md-7 col-sm-7 col-xs-7 col-sm-12 hidden-xs ">
                 <div id = "search" class="input-group" id="searchDiv">
                     <input autocomplete="off" id="searchInput" name="id" type="text" class="form-control" placeholder="הקלד שם אמן או שיר" data-auto-complete-url="/Search/AutoComplete" data-search-url="/%D7%97%D7%99%D7%A4%D7%95%D7%A9" />
                     <span class="input-group-btn  hidden-xs">
-                                        <button class="btn btn-default" type="submit">חפש</button>
-                                   </span>
+                        <button class="btn btn-default" type="submit">חפש</button>
+                    </span>
                 </div>
                 </br></br>
-
-
                 <b> <a class = "char" href="">א</a>&nbsp&nbsp&nbsp
                     <a class = "char" href="">ב</a>&nbsp&nbsp&nbsp
                     <a class = "char" href="">ג</a>&nbsp&nbsp&nbsp
@@ -95,15 +88,12 @@
                     <a class = "char" href="">ת</a></b>
             </div>
 
-            <div id = "headLogo" class="col-lg-2">
+            <div id = "headLogo" class="col-lg-2 col-md-2 col-sm-2 col-xs-2">
                 <a href="#"><img id="logo" src="img/logo.png"/></a>
             </div>
         </div>
     </div>
 </div>
-
-
-
 
 <nav class="navbar navbar-inverse top-nav ">
     <div class="container-fluid">
@@ -117,13 +107,9 @@
         </ul>
     </div>
 </nav>
-
-
-
             <div class="row">
                 <div ng-view></div>
             </div>
-
 
 </div>
 </br>
