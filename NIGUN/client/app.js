@@ -11,8 +11,8 @@ myApp.config(function($routeProvider){
             templateUrl: "views/contact.html",
             controller: "contactController"
         })
-        .when('/chords', {
-            templateUrl: "views/chords.html",
+        .when('/addsong', {
+            templateUrl: "views/addsong.html",
             controller: "contactController"
         })
         .when('/GuitarTuning', {

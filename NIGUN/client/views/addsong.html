@@ -1,0 +1,57 @@
+<div class="container" id="addsong">
+
+    <div class="row">
+        <div class="col-md-12"><div class="pull-right"><h2 >הוספת שיר</h2></div></div>
+    </div>
+    <br/>
+
+    <div class="row">
+
+        <div class="col-md-6">
+            <form class="">
+                <div class="form-group">
+                    <label for="songName">שם השיר:</label>
+                    <input class="form-control" type="text" id="songName">
+                </div>
+                <div class="form-group">
+                    <label for="artistName">שם האומן:</label>
+                    <select class="form-control" id="artistName">
+                        <option value="">בחר</option>
+                        <option value="4760">יעקב שוואקי</option>
+                        <option value="4745">אברהם פריד</option>
+                        <option value="4733">אוהד מושקוביץ</option>
+                        <option value="4677">שלמה כהן</option>
+                        <option value="4556">נתנאל ישראל</option>
+                        <option value="4551">מוטי שטינמץ</option>
+                        <option value="4510">שלמה שמחה</option>
+                        <option value="4413">המנגנים</option>
+
+                    </select>
+                    <!--<input class="form-control" type="text" id="artistName">-->
+                </div>
+                <div class="form-group">
+                    <label for="albumName">שם האלבום:</label>
+                    <input class="form-control" type="text" id="albumName">
+                </div>
+                <div class="form-group">
+                    <label for="linkTo">לינק להאזנה:</label>
+                    <input class="form-control" type="text" id="linkTo">
+                </div>
+            </form>
+        </div>
+
+        <div class="col-md-6">
+            <div class="form-group">
+                <label for="songWords">הכנס מילות שיר:</label>
+                <textarea class="form-control" id="songWords" rows="15" value="tali"></textarea>
+            </div>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-md-2">
+            <button type="submit" class="btn btn-danger form-control">העלה שיר</button>
+        </div>
+
+    </div>
+</div>

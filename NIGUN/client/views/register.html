@@ -1,0 +1,62 @@
+
+<div class="container" id="register">
+
+    <div class="col-lg-12">
+        <h3>הרשמה לאתר</h3>
+    </div>
+
+    <hr>
+
+    <div class="col-md-8 col-md-offset-7  col-sm-7 ">
+        <form action="/" class="form-horizontal offset8" method="post" role="form" novalidate="novalidate">
+            <input name="__RequestVerificationToken" type="hidden" value="6YA8vYzH6aCaWJtpLM9QC-u1W7a1QLC7Ruqx559LiPcyUNEBBVXmfxZxwqgiEbHc3l_ptl4oIDGRc402RqI8TsONwvU1">
+
+
+
+            <div class="form-group">
+                <div class="col-md-5 col-sm-8 col-xs-8">
+                    <input class="form-control" id="FirstName" name="FirstName" type="text" value="">
+                </div>
+                <label class="col-md-2 col-sm-4 col-xs-4 control-label" for="FirstName">שם פרטי</label>
+            </div>
+            <div class="form-group">
+                <div class="col-md-5 col-sm-8 col-xs-8">
+                    <input class="form-control" id="LastName" name="LastName" type="text" value="">
+                </div>
+                <label class="col-md-2 col-sm-4 col-xs-4 control-label" for="LastName">שם משפחה</label>
+            </div>
+
+            <div class="form-group">
+                <div class="col-md-5 col-sm-8 col-xs-8">
+                    <input class="form-control" data-val="true" data-val-email="הדוא&quot;ל שהקלדת אינו חוקי" data-val-required="השדה <b>דוא&quot;ל</b> הינו שדה הכרחי " id="Email" name="Email" type="text" value="">
+                </div>
+                <label class="col-md-2 col-sm-4 col-xs-4 control-label" for="Email">דוא"ל</label>
+            </div>
+            <div class="form-group">
+                <div class="col-md-5 col-sm-8 col-xs-8">
+                    <input class="form-control" data-val="true" data-val-length="הסיסמה צריכה להיות באורך של 6 תווים לפחות." data-val-length-max="100" data-val-length-min="6" data-val-required="השדה <b>סיסמה</b> הינו שדה הכרחי " id="Password" name="Password" type="password">
+                </div>
+                <label class="col-md-2 col-sm-4 col-xs-4 control-label" for="Password">סיסמה</label>
+            </div>
+            <div class="form-group">
+                <div class="col-md-5 col-sm-8 col-xs-8">
+                    <input class="form-control" data-val="true" data-val-equalto="הסיסמאות אינן תואמות" data-val-equalto-other="*.Password" id="ConfirmPassword" name="ConfirmPassword" type="password">
+                </div>
+                <label class="col-md-2 col-sm-4 col-xs-4 control-label" for="ConfirmPassword">סיסמה שוב</label>
+            </div>
+            <div class="form-group">
+                <div class="col-md-5 col-sm-8 col-xs-8">
+                    <div class="g-recaptcha" data-size="compact" data-sitekey="6LdA4-QSAAAAAIsZRU6f3ab_kDcvbw-yGx6SlumX"><div style="width: 164px; height: 144px;"><div><iframe src="https://www.google.com/recaptcha/api2/anchor?k=6LdA4-QSAAAAAIsZRU6f3ab_kDcvbw-yGx6SlumX&amp;co=aHR0cDovL3d3dy5uYWdudS5jby5pbDo4MA..&amp;hl=iw&amp;v=r20161215161951&amp;size=compact&amp;cb=opyz5kuick7n" title="ווידג'ט recaptcha" width="164" height="144" frameborder="0" scrolling="no" name="undefined"></iframe></div><textarea id="g-recaptcha-response" name="g-recaptcha-response" class="g-recaptcha-response" style="width: 250px; height: 40px; border: 1px solid #c1c1c1; margin: 10px 25px; padding: 0px; resize: none;  display: none; "></textarea></div></div>
+                    <div class="alert alert-danger" style="margin-top:5px;display:none;" id="errorCaptcha">יש ללחוץ על "אני לא רובוט" תחילה ואז ללחוץ "שליחה" שוב</div>
+                </div>
+                <label class="col-md-2 col-sm-4 col-xs-4 control-label" >אישור</label>
+            </div>
+            <div class="form-group">
+                <div class="col-md-offset-2 col-md-10 col-sm-12">
+                    <input type="submit" class="btn btn-success" value="שליחה">
+                </div>
+            </div>
+        </form>    </div>
+
+
+</div>

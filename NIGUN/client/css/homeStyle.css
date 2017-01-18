@@ -1,7 +1,7 @@
 body{
-    background-color:black;
+    background-color:white;
     direction: rtl;
-    }
+}
 #top{
     background-color: #800000;
     margin-bottom: inherit;
@@ -23,12 +23,17 @@ body{
 
 }
 #search{
-    padding-top: 20px;
+    margin-top: 50px;
     padding-right: 35px;
 }
 .char{
+
     color: darkgray;
     font-size: x-large;
+}
+#charBox{
+    margin-top: -20px;
+    padding-bottom: 9px;
 }
 .icon-bar{
     /*background-color: red;*/
@@ -46,17 +51,14 @@ body{
 }
 #myCarousel{
     /*z-index: -1;*/
-
-
 }
 .navbar{
     background-color:  #555;
-
+    margin-bottom: 0px;
 }
 .nav-tabs{
     border-bottom: 2px solid #800000;
     margin-bottom: auto;
-
 }
 .top-nav ul li a {
     display: block;
@@ -72,23 +74,19 @@ body{
 a {
     text-decoration: none;
 }
-
 .top-nav li.active1> a, .top-nav li> a:hover {
     background: #800000;
     border-color: #800000;
-
-
 }
 
 
 #homeContain{
-    background-image: url("coolgitar.png");
+    /*background-image: url("coolgitar.png");*/
     background-repeat: no-repeat;
     background-color: white;
     background-size:100%;
 
 }
-
 .list-group-item {
     opacity:0.8;
     border: none;
@@ -96,11 +94,31 @@ a {
     margin: 1px 0;
     border-bottom: 1px dotted #c2c2c2;
 }
-.marquee{
-    text-align: center;
-    background-color: darkgray;
+#loginLink{
+    margin-top:50px;
+    padding:5px 10px;
+    color:white;
+}
+#registerLink{
+    margin-top:50px;
+    padding:5px 10px;
+    color:white;
+}
+.btn-danger{
+    background-color: #555555;
+    border-color:gray;
+}
+.btn-search{
+    border-radius: 0px;
+}
+#searchDiv{
+    border-radius: 0px;
 }
 
+.marquee{
+    text-align: center;
+    background-color: #555;
+}
 footer {
     background-color: #555;
     color: white;
