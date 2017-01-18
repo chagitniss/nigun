@@ -1,10 +1,4 @@
 
-#login{
-
-    background-color: white;
-
-
-}
 
 @media (min-width: 768px) {
     .omb_row-sm-offset-3 div:first-child[class*="col-"] {
