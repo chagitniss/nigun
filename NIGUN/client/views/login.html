@@ -1,64 +1,59 @@
+<meta name="google-signin-client_id" content="http://769310427365-fsoufl5d7n8vfkgot2dovrp4brt8lvqt.apps.googleusercontent.com.apps.googleusercontent.com";>
 
 <div class="container" id="login">
 
-    <div class="omb_login">
+    <div class="omb_login col-md-offset-10">
         <h3 class="omb_authTitle"> התחברות לאתר </h3>
-        <hr />
-        <h1>התחבר באמצעות רשת חברתית</h1>
-        <div class="row omb_row-sm-offset-3 omb_socialButtons">
-            <div class="col-xs-4 col-sm-2">
-                <a href="#" class="btn btn-lg btn-block omb_btn-facebook">
-                    <i class="fa fa-facebook visible-xs"></i>
-                    <span class="hidden-xs">Facebook</span>
-                </a>
-            </div>
 
-            <div class="col-xs-4 col-sm-2">
-                <a href="#" class="btn btn-lg btn-block omb_btn-google">
-                    <i class="fa fa-google-plus visible-xs"></i>
-                    <span class="hidden-xs">Google+</span>
-                </a>
-            </div>
+
+
         </div>
-        <div class="row omb_row-sm-offset-3 omb_loginOr">
-            <div class="col-xs-12 col-sm-6">
-                <hr class="omb_hrOr">
-                <span class="omb_spanOr">או באמצעות</span>
-            </div>
-        </div>
+
         </br>
 
-        <div class="row omb_row-sm-offset-3">
-            <div class="col-xs-12 col-sm-6">
-                <form class="omb_loginForm" action="" autocomplete="off" method="POST">
-                    <div class="input-group">
-                        <span class="input-group-addon"><i class="fa fa-user"></i></span>
-                        <input type="text" class="form-control" name="username" placeholder="כתובת דואר אלקטרוני">
-                    </div>
-                    <span class="help-block"></span>
+    <div class="col-md-9 col-md-offset-7">
+        <section id="loginForm">
+            <form action="/%D7%94%D7%AA%D7%97%D7%91%D7%A8%D7%95%D7%AA" class="form-horizontal" method="post" role="form" novalidate="novalidate"><input name="__RequestVerificationToken" type="hidden" value="S85nOj658PYtIiXfP_X6U8C4riXa3SMZWw-fdt1SXGjfsB3HcW7lLNWt0aqWap53a3ja1UphETnUjf6vtT0_hAzz03M1">
 
-                    <div class="input-group">
-                        <span class="input-group-addon"><i class="fa fa-lock"></i></span>
-                        <input type="password" class="form-control" name="password" placeholder="סיסמא">
+                <div class="form-group">
+
+                    <div class="col-md-5">
+                        <input class="form-control" data-val="true" data-val-email="הדוא&quot;ל שהקלדת אינו חוקי" data-val-required="השדה <b>דוא&quot;ל</b> הינו שדה הכרחי " id="Email" name="Email" type="text" value="">
+                        <span class="field-validation-valid text-danger" data-valmsg-for="Email" data-valmsg-replace="true"></span>
                     </div>
-                    </br>
-                    <button type="submit" class="btn btn-lg btn-primary btn-block" >התחברות</button>
-                </form>
-            </div>
-        </div>
-        </br>
-        <div class="row omb_row-sm-offset-3">
-            <div class="col-xs-12 col-sm-3">
-                <label class="checkbox">
-                    <input type="checkbox" value="זכור אותי">זכור אותי
-                </label>
-            </div>
-            <div class="col-xs-12 col-sm-3">
-                <p class="omb_forgotPwd">
-                    <a href="#">שכחתי סיסמא</a>
-                </p>
-            </div>
-        </div>
+                    <label class="col-md-2 control-label" for="Email">דוא"ל</label>
+                </div>
+                <div class="form-group">
+
+                    <div class="col-md-5">
+                        <input class="form-control" data-val="true" data-val-required="השדה <b>סיסמה</b> הינו שדה הכרחי " id="Password" name="Password" type="password">
+                        <span class="field-validation-valid text-danger" data-valmsg-for="Password" data-valmsg-replace="true"></span>
+                    </div>
+                    <label class="col-md-2 control-label" for="Password">סיסמה</label>
+                </div>
+                <div class="form-group">
+                    <div class=" col-md-5">
+                        <div class="checkbox">
+                            <input data-val="true" data-val-required="The זכור אותי לפעם הבאה field is required." id="RememberMe" name="RememberMe" type="checkbox" value="true">
+                            <input name="RememberMe" type="hidden" value="false">
+                            <label for="RememberMe" class="rem">זכור אותי לפעם הבאה</label>
+                        </div>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <div class="col-md-5">
+
+                        <div class="g-signin2" data-onsuccess="onSignIn"></div>
+                        <br><br>
+                        <p>
+                            <a href="/%D7%94%D7%A8%D7%A9%D7%9E%D7%94">הרשמה</a> |
+                            <a href="/%D7%A9%D7%9B%D7%97%D7%AA%D7%99_%D7%A1%D7%99%D7%A1%D7%9E%D7%94">שכחתי סיסמה</a>
+                        </p>
+
+                    </div>
+                </div>
+            </form>
+        </section>
     </div>
 
 </div>
