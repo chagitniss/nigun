@@ -108,10 +108,12 @@ a {
     color:white;
     background-color: #800000;
 }
-.btn-danger{
-    background-color: #555555;
-    border-color:gray;
+#kav{
+    margin-top:50px;
+    padding:5px 10px;
+    color:white;
 }
+
 .btn-search{
     border-radius: 0px;
 }
