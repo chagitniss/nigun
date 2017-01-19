@@ -1,5 +1,5 @@
 
-    <div  style="height: 100px; width: 100%; background-color:black; padding-top: 3%; ">
+    <div  style="height: 100px; width: 100%; padding-top: 3%; ">
     <div class="container" id="title" >
         <div class="lyrics-title marginb20 ">
             <div class="pull-right"><h1>אומנים</h1></div>
@@ -7,33 +7,20 @@
     </div>
 </div>
 
-
-<div id="myCarousel" class="carousel slide" data-ride="carousel">
-    <!-- Indicators -->
-    <ol class="carousel-indicators">
-        <li data-target="#myCarousel" data-slide-to="2" class="active"></li>
-        <li data-target="#myCarousel" data-slide-to="3"></li>
-        <li data-target="#myCarousel" data-slide-to="4"></li>
-    </ol>
-
-
-    <div class="carousel-inner" role="listbox">
-        <div class="item active">
-
-            <div class="col-sm-12 col-xs-12" id="artists" >
-                <div ng-controller="artistsController" class="container-fluid text-center">
-                    <div class="col-sm-10 col-xs-10 text-center">
-                        <div class="row" >
-                            <div  ng-repeat="artist in artists track by $index" class="col-xs-3 col-md-3" >
-                                <a ng-href="#/artists/{{artist.name}}"><div class="thumbnail" >
-                                    <div class="caption">
-                                        <h5 class="artistName" style="color: red">{{}}</h5>
+    <div class="col-sm-12 col-xs-12" id="artists" >
+        <div ng-controller="artistsController" class="container-fluid text-center">
+            <div class="col-sm-10 col-xs-10 text-center">
+                <div class="row" >
+                    <div class="thumbnail" >
+                        <div  ng-repeat="artist in artists track by $index" class="col-xs-3 col-md-3" >
+                            <a ng-href="#/artists/{{artist.name}}">
+                                <div class="caption">
+                                    <h5 class="artistName" style="color: red">{{}}</h5>
                                         <div class="img-ph">
                                             <img ng-src="../img/{{artist.img}}" alt="Image" height="350px" width="250px">
                                         </div>
                                     </div>
-                                </div></a>
-                            </div>
+                            </a>
                         </div>
                     </div>
                 </div>
@@ -41,12 +28,5 @@
         </div>
     </div>
 
-    <a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev">
-        <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
-        <span class="sr-only">Previous</span>
-    </a>
-    <a class="right carousel-control" href="#myCarousel" role="button" data-slide="next">
-        <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
-        <span class="sr-only">Next</span>
-    </a>
-</div>
+
+
