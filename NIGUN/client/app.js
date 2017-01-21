@@ -35,9 +35,13 @@ myApp.config(function($routeProvider){
             templateUrl: "views/artists.html",
             controller: "artistsController"
         })
-        .when('/artists/:name', {
+        .when('/artists/:name?', {
             templateUrl: "views/artistShow.html",
             controller: "artistShowController"
+        })
+        .when('/artists/:artistName/:name', {
+            templateUrl: "views/songShow.html",
+            controller: "songShowController"
         })
 
         .otherwise({redirectTo:'/home'});
@@ -45,3 +49,4 @@ myApp.config(function($routeProvider){
 
 myApp.controller("artistsController", ["$scope", "$http", artistsController]);
 myApp.controller("artistShowController", ["$scope",  "$routeParams", "$http", artistShowController]);
+myApp.controller("songShowController", ["$scope",  "$routeParams", "$http", songShowController]);

@@ -1,8 +1,9 @@
  <div ng-controller="artistShowController" class="container-fluid text-center">
 
-         <div id="songsList" ng-repeat="song in songs track by $index" class="col-md-12">{{song.name}}</div>
 
-     <a ng-href="#/artists" style="color: red">
+         <div id="songsList" ng-repeat="song in songs track by $index" class="col-md-12">
+             <a ng-href="#/artists/{{song.artistsName}}/{{song.name}}">{{song.name}}</a>
+         </div>
 
-     </a>
+
  </div>
