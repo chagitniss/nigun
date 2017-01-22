@@ -1,4 +1,31 @@
-<div ng-controller="songShowController" class="container-fluid text-center">
+<div ng-controller="songShowController" class="container-fluid text-right">
+    <div class="row" id="songRow">
 
-        <div class="col-md-12">{{song[0].chords}}</div>
+        <div class="col-md-1 col-sm-4 col-lg-3 col-xs-12">
+            <div id="youtubeContainer">
+                <div id="youtubePlayer">סרטון יוטיוב</div>
+            </div>
+        </div>
+
+        <div col-md-10 col-sm-8 col-lg-6>
+
+            <div id="songHeader">
+                <div>
+                    <img alt="" src=''>
+                </div>
+
+                <div id="songName">{{song[0].name}}</div>
+
+                <div id="artistName"><a ng-href="#/artists/{{song[0].artistsName}}">{{song[0].artistsName}}</a></div>
+
+            </div><!--end of header-->
+
+            <div id="chords">
+
+                <div>{{song[0].chords}}</div>
+
+            </div>
+
+        </div>
+    </div>
 </div>

@@ -45,7 +45,6 @@ function loadChords(req, res) {
         if (err)
             res.send(err);
         console.log(song);
-        console.log("we are hear!!");
         res.json(song); // return the songs in JSON format
     });
 }
