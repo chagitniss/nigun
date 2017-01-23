@@ -1,16 +1,15 @@
 #artistsPage{
     background-color: white;
 }
-#title{
-    padding-right: 65px;
-    padding-bottom: 5px;
-    border-bottom: 2px solid #800000;
 
-}
 h1{
     font-size: 46px;
 }
 
 #artists{
     margin-left: 9%;
+}
+
+.img-ph{
+    margin-top: 20px;
 }
