@@ -8,6 +8,7 @@
 }
 #artistName{
     font-family: Arial;
+<<<<<<< HEAD
     font-size: 30px;
 }
 #chords{
@@ -15,3 +16,7 @@
     font-family: Arial;
     font-size: 22px;
 }
+=======
+    font-size: 15px;
+}
+>>>>>>> b3f0e73920d8df48240dae0c8b2a7669d98d825f
