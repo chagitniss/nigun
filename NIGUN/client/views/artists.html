@@ -1,31 +1,18 @@
-<div  style="height: 100px; width: 100%; padding-top: 3%; ">
-    <div class="container" id="title" >
-        <div class="lyrics-title marginb20 ">
-            <div class="pull-right"><h1>אומנים</h1></div>
-        </div>
-    </div>
+<div class="container" id="title" ><div style="font-family: Calibri" class="pull-right"><h1>אקורדים לשירים</h1></div>
 </div>
 
-    <div class="col-sm-12 col-xs-12" id="artists" >
-        <div ng-controller="artistsController" class="container-fluid text-center">
-            <div class="col-sm-10 col-xs-10 text-center">
-                <div class="row" >
-                    <div class="thumbnail" >
-                        <div  ng-repeat="artist in artists track by $index" class="col-xs-3 col-md-3" >
-                            <a ng-href="#/artists/{{artist.name}}">
-                                <div class="caption">
-                                    <h5 class="artistName" style="color: red"></h5>
-                                        <div class="img-ph">
-                                            <img ng-src="../img/{{artist.img}}" alt="Image" height="350px" width="250px">
-                                        </div>
-                                    </div>
-                            </a>
+<div class="col-sm-12 col-xs-12 pull-left" id="artists" >
+    <div ng-controller="artistsController" class="container-fluid text-center">
+        <div class="col-sm-10 col-xs-10 text-center">
+            <div class="row" >
+                <div  ng-repeat="artist in artists track by $index" class="col-xs-3 col-md-3" >
+                    <a ng-href="#/artists/{{artist.name}}">
+                        <div class="img-ph">
+                            <img ng-src="../img/{{artist.img}}" alt="Image" height="350px" width="250px">
                         </div>
-                    </div>
+                    </a>
                 </div>
             </div>
         </div>
     </div>
-
-
-
+</div>
