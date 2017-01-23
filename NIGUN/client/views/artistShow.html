@@ -1,9 +1,8 @@
- <div ng-controller="artistShowController" class="container-fluid text-center">
-
-
-         <div id="songsList" ng-repeat="song in songs track by $index" class="col-md-12">
-             <a ng-href="#/artists/{{song.artistsName}}/{{song.name}}">{{song.name}}</a>
+<div class="container" id="title" >
+    <div style="font-family: Calibri" class="pull-right"><h1>אקורדים לשירים של {{artist.name}}</h1></div>
+</div>
+<div ng-controller="artistShowController" class="container-fluid text-right">
+         <div id="songsList" ng-repeat="song in songs track by $index" class="col-lg-7 col-xs-9 pull-right">
+             <a ng-href="#/artists/{{song.artistsName}}/{{song.name}}" class="list-group-item">{{song.name}}</a>
          </div>
-
-
- </div>
+</div>
