@@ -1,9 +1,9 @@
 #songRow {
-    padding: 50px;
-    text-indent: 50px;
+    padding: 30px;
+    text-indent: 40px;
 }
 #songName{
-    font-family: Arial;
+    font-family: Calibri;
     font-size: 50px;
 }
 #artistName{
