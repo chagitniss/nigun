@@ -13,7 +13,7 @@ myApp.config(function($routeProvider){
         })
         .when('/addsong', {
             templateUrl: "views/addsong.html",
-            controller: "contactController"
+            controller: "addsongController"
         })
         .when('/GuitarTuning', {
             templateUrl: "views/GuitarTuning.html",
@@ -50,3 +50,5 @@ myApp.config(function($routeProvider){
 myApp.controller("artistsController", ["$scope", "$http", artistsController]);
 myApp.controller("artistShowController", ["$scope",  "$routeParams", "$http", artistShowController]);
 myApp.controller("songShowController", ["$scope",  "$routeParams", "$http", songShowController]);
+
+myApp.controller("addsongController", ["$scope", "$http", addsongController]);
