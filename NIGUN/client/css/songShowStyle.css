@@ -4,19 +4,19 @@
 }
 #songName{
     font-family: Calibri;
-    font-size: 50px;
+    font-size: 15px;
 }
 #artistName{
     font-family: Arial;
-<<<<<<< HEAD
-    font-size: 30px;
+    font-size: 15px;
 }
 #chords{
 
     font-family: Arial;
     font-size: 22px;
 }
-=======
-    font-size: 15px;
+.fluid-width-video-wrapper{
+    padding-top: 15.272%;
+    margin-left: 100px;
 }
->>>>>>> b3f0e73920d8df48240dae0c8b2a7669d98d825f
+
