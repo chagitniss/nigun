@@ -1,4 +1,4 @@
-<div class="container" id="addsong">
+<div class="container" id="addsong" ng-controller="addsongController">
     <div id="titleAddSong" class="row">
         <div class="col-md-12 col-lg-12 col-sm-12 col-xs-12">
             <div style="font-family: Calibri" class="pull-right"><h3>הוספת שיר</h3></div>
@@ -11,11 +11,11 @@
             <form style="font-family: Calibri" class="">
                 <div class="form-group">
                     <label for="songName">שם השיר:</label>
-                    <input class="form-control" type="text" id="songName">
+                    <input class="form-control" type="text" id="songName" ng-model="add.name" name="name" required>
                 </div>
                 <div style="font-family: Calibri" class="form-group">
                     <label for="artistName">שם האומן:</label>
-                    <select style="font-family: Calibri" class="form-control" id="artistName">
+                    <select style="font-family: Calibri" class="form-control" id="artistName" ng-model="add.artistName" name="artistName" required >
                         <option value="">בחר</option>
                         <option value="4760">יעקב שוואקי</option>
                         <option value="4745">אברהם פריד</option>
@@ -29,28 +29,26 @@
                     </select>
                     <!--<input class="form-control" type="text" id="artistName">-->
                 </div>
+
                 <div class="form-group">
-                    <label for="albumName">שם האלבום:</label>
-                    <input class="form-control" type="text" id="albumName">
+                    <label for="link">לינק להאזנה:</label>
+                    <input class="form-control" type="text" id="link" ng-model="add.link" name="link" required>
                 </div>
-                <div class="form-group">
-                    <label for="linkTo">לינק להאזנה:</label>
-                    <input class="form-control" type="text" id="linkTo">
+
+                <div >
+                    <div class="form-group">
+                        <label for="songWords">הכנס מילים ואקורדים:</label>
+                        <textarea class="form-control" id="songWords" rows="12" value="tali" ng-model="add.chords" name="chords" required></textarea>
+                    </div>
                 </div>
+
+                <div class="col-md-6 col-lg-6 col-sm-6 col-xs-6">
+                    <button type="submit" class="btn btn-danger form-control" ng-click="uploadSong(add)">העלה שיר</button>
+                </div>
+
             </form>
         </div>
 
-        <div style="font-family: Calibri" class="col-md-6 col-lg-6 col-sm-6 col-xs-6">
-            <div class="form-group">
-                <label for="songWords">הכנס מילים ואקורדים:</label>
-                <textarea class="form-control" id="songWords" rows="12" value="tali"></textarea>
-            </div>
-        </div>
-    </div>
-    <div style="font-family: Calibri" class="row">
-        <div class="col-md-2 col-lg-2 col-sm-2 col-xs-2">
-            <button type="submit" class="btn btn-danger form-control" onclick="uploadSong()">העלה שיר</button>
-        </div>
 
     </div>
 </div>

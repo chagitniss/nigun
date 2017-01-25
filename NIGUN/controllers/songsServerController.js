@@ -1,6 +1,7 @@
 var express = require('express');
 var router = express.Router();
 var config=require('../tsconfig.json');
+var qs = require('querystring');
 
 var mongoose = require ('mongoose');
 
@@ -24,6 +25,7 @@ var songsList = mongoose.model('songs',songsSchema);
 
 router.get('/loadSongs/:name', loadSongs);
 router.get('/loadChords/:name', loadChords);
+router.post('/addsong', addsong);
 
 
 module.exports = router;
@@ -47,5 +49,23 @@ function loadChords(req, res) {
         console.log(song);
         res.json(song); // return the songs in JSON format
     });
+}
+
+
+function addsong(req,res) {
+    //add song to database
+    console.log("get post request in server side");
+    var body = '';
+    req.on('data', function (data) {
+        body += data;
+    });
+
+    req.on('end', function () {
+        var POST = qs.parse(body);
+        var newSong = new songsList({ name: POST.name, artistName :POST.artistName ,link : POST.link ,chords : POST.chords });
+        newSong.save();
+        res.send(newSong);
+    });
+
 }
 
