@@ -1,7 +1,6 @@
 function addsongController($scope, $http) {
 
-    var x;
-    $scope.data=x;
+
 
     $scope.uploadSong=function(add){
         console.log(add);
@@ -10,7 +9,7 @@ function addsongController($scope, $http) {
             name : add.name,
             artistName : add.artistName,
             link : add.link,
-            chords : add.chords,
+            lines : constructLines(add.text),
         });
         console.log(data);
         var config = {
@@ -18,6 +17,18 @@ function addsongController($scope, $http) {
                 'Content-Type': 'application/x-www-form-urlencoded;charset=utf-8;'
             }
         }
+        function constructLines(text) {
+            var lines=text.split("\n");
+            var results = [];
+            for (line in lines){
+                object = {};
+                object.words = line;
+                object.chords = "";
+                results.push(object);
+            }
+             return results;
+        }
+
 
         $http.post('songsController/addsong/', data, config)
         .success(function (data, status, headers, config) {

@@ -37,16 +37,37 @@
 
                 <div >
                     <div class="form-group">
-                        <label for="songWords">הכנס מילים ואקורדים:</label>
-                        <textarea class="form-control" id="songWords" rows="12" value="tali" ng-model="add.chords" name="chords" required></textarea>
+                        <label for="songWords">הכנס מילים:</label>
+                        <textarea class="form-control" id="songWords" rows="12" value="tali" ng-model="add.text"  name="text" ng-change="change()" required></textarea>
                     </div>
                 </div>
 
-                <div class="col-md-6 col-lg-6 col-sm-6 col-xs-6">
-                    <button type="submit" class="btn btn-danger form-control" ng-click="uploadSong(add)">העלה שיר</button>
+                <label for="chords">הכנס אקורדים מעל כל שורת מילים:</label>
+
+                <div class="form-group" ng-repeat="line in lines track by $index">
+                    <label>{{line.words}}</label>
+                    <input class="form-control" type="chords" id="chords" ng-model="line.chords" name="chords" required></input>
                 </div>
 
+                <div class="col-md-6 col-lg-6 col-sm-6 col-xs-6">
+                    <button type="submit" class="btn btn-danger form-control" ng-click="uploadSong(add)">העלה שיר </button>
+                </div>
+
+
             </form>
+
+            </br></br>
+
+            <form>
+
+
+
+
+            </form>
+
+
+
+
         </div>
 
 
