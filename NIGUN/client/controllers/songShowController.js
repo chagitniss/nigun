@@ -13,7 +13,7 @@ function songShowController($scope, $routeParams, $http){
     function onLoad(){
         $http.get('songsController/loadChords/'+name)
             .success(function(data){
-                $scope.song = data;
+                $scope.song = data[0];
                 console.log("Succeed loading");
                 console.log(data);
             })

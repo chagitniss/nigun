@@ -3,9 +3,10 @@
 
         <div class="col-md-1 col-sm-4 col-lg-3 col-xs-12">
             <div id="youtubeContainer">
-                <div id="youtubePlayer">{{song.link}}</div>
+                <a ng-href="{{song.link}}"><div id="youtubePlayer">לינק ליוטיוב</div></a>
                  <div class="fluid-width-video-wrapper">
-                    <iframe src="{{song.link}}" frameborder="0" allowfullscreen="" id="fitvid815086"></iframe>
+                    <iframe ng-src="//www.youtube.com/embed/song.link" frameborder="0" allowfullscreen id="fitvid815086">
+                   </iframe>
                 </div>
             </div>
         </div>
@@ -13,9 +14,9 @@
         <div col-md-10 col-sm-8 col-lg-6>
 
             <div id="songHeader">
-                <div>
-                    <img alt="" src='{{song.img}}'>
-                </div>
+             <!--   <div>
+                    <img alt="" src=''>
+                </div>-->
 
                 <div id="songName">{{song.name}}</div>
 
@@ -24,14 +25,10 @@
             </div><!--end of header-->
             </br>
 
-
-
             <div id="chords" class="row">
-
-                <div class="col-md-2 col-sm-4 col-xs-6 pull-right">
-                    <p ng-repeat="line in song.lines track by $index">{{line.chords}}</br>{{line.words}}</p></div>
+                <div class="col-md-6 col-sm-4 col-xs-6 pull-right">
+                    <p ng-repeat="line in song.lines track by $index">{{line.chords}}</br>{{line.words}}</p>
                 </div>
-
             </div>
 
         </div>
