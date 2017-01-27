@@ -1,21 +1,22 @@
 <div class="container" id="addsong" ng-controller="addsongController">
+     <div id="fontim">
     <div id="titleAddSong" class="row">
         <div class="col-md-12 col-lg-12 col-sm-12 col-xs-12">
-            <div style="font-family: Calibri" class="pull-right"><h2>הוספת שיר</h2></div>
+            <div class="pull-right"><h2>הוספת שיר</h2></div>
         </div>
     </div>
     <br/>
 
     <div class="row">
         <div class="col-md-6 col-lg-6 col-sm-6 col-xs-6">
-            <form style="font-family: Calibri" class="">
+            <form class="">
                 <div class="form-group">
                     <label for="songName">שם השיר:</label>
                     <input class="form-control" type="text" id="songName" ng-model="add.name" name="name" required>
                 </div>
-                <div style="font-family: Calibri" class="form-group">
+                <div class="form-group">
                     <label for="artistName">שם האומן:</label>
-                    <select style="font-family: Calibri" class="form-control" id="artistName" ng-model="add.artistName" name="artistName" required >
+                    <select class="form-control" id="artistName" ng-model="add.artistName" name="artistName" required >
                         <option value="">בחר</option>
                         <option value="4760">יעקב שוואקי</option>
                         <option value="4745">אברהם פריד</option>
@@ -78,7 +79,7 @@
 
 
         </div>
-
+</div>
 
     </div>
 </div>
