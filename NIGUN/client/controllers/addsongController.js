@@ -14,9 +14,7 @@ function addsongController($scope, $http) {
         });
     }
 
-    $scope.adddiv = function() {
 
-    }
 
     $scope.uploadSong=function(add){
         console.log(add);
