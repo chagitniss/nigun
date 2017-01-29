@@ -9,14 +9,14 @@
 
     <div class="row">
         <div class="col-md-6 col-lg-6 col-sm-6 col-xs-6">
-            <form class="">
+            <form name="add" ng-submit="uploadSong(add)">
                 <div class="form-group">
                     <label for="songName">שם השיר:</label>
-                    <input class="form-control" type="text" id="songName" ng-model="add.name" name="name" required>
+                    <input class="form-control" type="text" id="songName"  name="name" required>
                 </div>
                 <div class="form-group">
                     <label for="artistName">שם האומן:</label>
-                    <select class="form-control" id="artistName" ng-model="add.artistName" name="artistName" required >
+                    <select class="form-control" id="artistName"  name="artistName" required >
                         <option value="">בחר</option>
                         <option value="4760">יעקב שוואקי</option>
                         <option value="4745">אברהם פריד</option>
@@ -33,7 +33,7 @@
 
                 <div class="form-group">
                     <label for="link">לינק להאזנה:</label>
-                    <input class="form-control" type="text" id="link" ng-model="add.link" name="link" required>
+                    <input class="form-control" type="text" id="link"  name="link" required>
                 </div>
 
                 <div >
@@ -46,15 +46,16 @@
                 <label>הכנס אקורדים מעל כל שורת מילים:</label>
 
                 <div ng-repeat="line in lines">
-                    <input type="text" ng-model="line.chords" />
+                    <input type="text" name="chords" />
                     </br>
-                    <label>{{line.words}}</label>
+                    <label name="words" value="line.words">{{line.words}}</label>
                     </br>
                 </div>
                 </br></br></br>
 
                 <div class="col-md-6 col-lg-6 col-sm-6 col-xs-6">
-                    <button type="submit" class="btn btn-danger form-control" ng-click="uploadSong(add)">העלה שיר </button>
+                    <!--button type="submit" class="btn btn-danger form-control" name="submit" >העלה שיר </button-->
+                    <input type="submit"   name="submit" value="אשר" />
                 </div>
 
 
