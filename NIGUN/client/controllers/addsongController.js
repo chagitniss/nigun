@@ -23,7 +23,7 @@ function addsongController($scope, $http) {
             name : add.name,
             artistName : add.artistName,
             link : add.link,
-            lines : constructLines(add.text),
+            lines : constructLines($scope.lyrics),
         });
         console.log(data);
         var config = {
@@ -31,7 +31,7 @@ function addsongController($scope, $http) {
                 'Content-Type': 'application/x-www-form-urlencoded;charset=utf-8;'
             }
         }
-        function constructLines(text) {
+       /* function constructLines(text) {
             var lines=text.split("\n");
             var results = [];
             for (line in lines){
@@ -41,6 +41,18 @@ function addsongController($scope, $http) {
                 results.push(object);
             }
              return results;
+        }*/
+
+        function constructLines(lyrics) {
+            var text_lines = lyrics.split("\n");
+            var resalt = [];
+            text_lines.forEach(function (text_line) {
+                object = {};
+                object.words = text_line;
+                object.chords = $scope.line.chords;
+                resalt.push(object);
+            });
+            return (resalt);
         }
 
 
