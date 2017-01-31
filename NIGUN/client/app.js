@@ -23,6 +23,10 @@ myApp.config(function($routeProvider){
             templateUrl: "views/login.html",
             controller: "contactController"
         })
+         .when('/showSearch', {
+            templateUrl: "views/showSearch.html",
+            controller: "artistsController"
+        })
          .when('/register', {
             templateUrl: "views/register.html",
             controller: "contactController"
