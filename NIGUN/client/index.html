@@ -31,7 +31,7 @@
     <script src="src/jquery.js"></script>
 
     <script src="controllers/homeController.js"></script>
-    <script src="controllers/indexController.js"></script>
+    <!--<script src="controllers/indexController.js"></script>-->
     <script src="controllers/artistsController.js"></script>
     <script src="controllers/artistShowController.js"></script>
     <script src="controllers/songShowController.js"></script>
@@ -62,10 +62,10 @@
             </div>
 
             <div id="HeaderLettersContainer" class="col-lg-7 col-md-7 col-sm-7 col-xs-7 col-sm-12 hidden-xs ">
-                <div id = "search" class="input-group" id="searchDiv">
-                    <input autocomplete="off" id="searchInput" name="id" type="text" class="form-control" placeholder="הקלד שם אמן או שיר" data-auto-complete-url="/Search/AutoComplete" data-search-url="/%D7%97%D7%99%D7%A4%D7%95%D7%A9" />
+                <div ng-controller="artistsController" id = "search" class="input-group" ><!--id="searchDiv"-->
+                    <input autocomplete="off" id="searchInput" name="id" type="text" class="form-control" placeholder="הקלד שם אמן לחיפוש"  />
                     <span class="input-group-btn  hidden-xs">
-                        <button class="btn btn-default" type="submit">חפש</button>
+                        <a ng-href="#/showSearch" ><button id="searchBtn" ng-click="onClickSearch()" class="btn btn-default" type="submit">חפש</button></a>
                     </span>
                 </div>
                 </br></br>
