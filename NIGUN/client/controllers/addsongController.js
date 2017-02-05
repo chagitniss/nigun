@@ -135,8 +135,6 @@ function addsongController($scope, $http) {
             });
             return (resalt);
         }
-=======
->>>>>>> origin/master
 
 
         /*  function constructLines() {
