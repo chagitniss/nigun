@@ -12,6 +12,7 @@ function songShowController($scope, $routeParams, $http){
     onLoad();
 
 
+
     function onLoad(){
         $http.get('songsController/loadChords/'+name)
             .success(function(data){
@@ -27,5 +28,14 @@ function songShowController($scope, $routeParams, $http){
             .error(function(data){
                 console.log("Error: "+data);
             });
+
+      /*  $scope.video = {
+            youtubeid: 'song.link'
+        }
+        $scope.getUrl = function (id) {
+            return '//www.youtube.com/embed/'+id+'?rel=0'
+        }
+        $scope.url = $scope.getUrl('song.link')*/
+
     }
 }
