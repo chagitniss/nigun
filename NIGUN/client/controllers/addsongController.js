@@ -3,6 +3,7 @@ function addsongController($scope, $http) {
         $scope.lyrics = '';
         $scope.lines = [];
 
+        $scope.artists={};
         $scope.onLoad=onLoad;
         onLoad();
     //init select options from database
@@ -18,6 +19,7 @@ function addsongController($scope, $http) {
             });
     }
 
+    //***************************************************************
 
         $scope.lyricsToLines = function() {
             var text_lines = $scope.lyrics.split("\n");

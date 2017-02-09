@@ -18,6 +18,7 @@
                         <label for="artistName">שם האומן:</label>
                         <select class="form-control" id="artistName" ng-model="add.artistName" name="artistName" required >
 
+                            <option ng-repeat="artist in artists">{{artist.name}}</option>
 
 
                         </select>

@@ -62,11 +62,14 @@ function addsong(req,res) {
 
     req.on('end', function () {
         var POST = qs.parse(body);
+        console.log(POST.artistName);
+        var artist=POST.artistName.toString();
         var parsLines=JSON.parse(POST.lines);
         console.log(parsLines);
         var lines=[];
 
-        var newSong = new songsList({name: POST.name, artistName :POST.artistName ,link : POST.link ,lines : parsLines });
+        var newSong = new songsList({name: POST.name, artistName: artist, link: POST.link, lines: parsLines});
+        console.log(newSong.artistName);
         //newSong.save();
         res.send(newSong);
     });
