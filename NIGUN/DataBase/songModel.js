@@ -11,6 +11,7 @@ var Line = new Schema({
 var songSchema = new Schema({
     name : String,
     artistsName: String,
+    type:String,
     link: String,
     lines: [Line]
 });

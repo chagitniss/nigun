@@ -47,6 +47,7 @@ function addsongController($scope, $http) {
             var data = $.param({
                 name : add.name,
                 artistName : add.artistName,
+                type: add.type,
                 link : add.link,
                 lines : lines,
             });

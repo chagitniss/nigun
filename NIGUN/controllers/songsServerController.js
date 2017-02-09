@@ -77,8 +77,9 @@ function addsong(req,res) {
                 res.send("אתה מנסה להוסיף אקורדים לשיר שכבר קיימים לו אקורדים במאגר.");
             }
             else {
-                var newSong = new songsList({name: POST.name, artistsName: artist, link: POST.link, lines: parsLines});
+                var newSong = new songsList({name: POST.name, artistsName: artist, type:POST.name, link: POST.link, lines: parsLines});
                 //newSong.save();
+                console.log(newSong.type);
                 console.log("song added");
                 res.send("האקורדים לשיר "+" '"+POST.name+"' "+"של "+artist+" התווספו בהצלחה!");
 
