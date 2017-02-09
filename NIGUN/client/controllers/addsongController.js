@@ -1,5 +1,7 @@
 function addsongController($scope, $http) {
 
+
+
         $scope.lyrics = '';
         $scope.lines = [];
 
@@ -35,6 +37,8 @@ function addsongController($scope, $http) {
 
 
         $scope.uploadSong=function(add){
+
+
            console.log($scope.lines);
            var lines = angular.toJson($scope.lines);
            console.log("json:",lines);
@@ -46,6 +50,7 @@ function addsongController($scope, $http) {
                 link : add.link,
                 lines : lines,
             });
+
            // console.log($scope.lines);
             console.log(data);
             var config = {
@@ -61,6 +66,9 @@ function addsongController($scope, $http) {
                     $scope.data = data;
                     console.log("Succeed post addsong");
                     console.log(data);
+                    alert(data);
+
+
                 })
                 .error(function (data, status, header, config) {
                     console.log("Error: "+data);

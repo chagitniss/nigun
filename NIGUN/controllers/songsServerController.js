@@ -43,6 +43,7 @@ function loadSongs(req, res) {
 function loadChords(req, res) {
     //Getting song data from songs collection and put in songs array
     var name = req.params.name;
+    var artistName = req.params.artistName;
     songsList.find({'name': name}, function (err, song) {
         if (err)
             res.send(err);
@@ -62,16 +63,28 @@ function addsong(req,res) {
 
     req.on('end', function () {
         var POST = qs.parse(body);
-        console.log(POST.artistName);
-        var artist=POST.artistName.toString();
+        var artist=POST.artistName;
         var parsLines=JSON.parse(POST.lines);
         console.log(parsLines);
         var lines=[];
 
-        var newSong = new songsList({name: POST.name, artistName: artist, link: POST.link, lines: parsLines});
-        console.log(newSong.artistName);
-        //newSong.save();
-        res.send(newSong);
+        //validation and save in database
+        songsList.find({'name': POST.name,'artistsName': artist}, function (err, song) {
+            if (err)
+                res.send(err);
+            if(song[0]!=null) {
+                console.log("song already exist");
+                res.send("אתה מנסה להוסיף אקורדים לשיר שכבר קיימים לו אקורדים במאגר.");
+            }
+            else {
+                var newSong = new songsList({name: POST.name, artistsName: artist, link: POST.link, lines: parsLines});
+                //newSong.save();
+                console.log("song added");
+                res.send("האקורדים לשיר "+" '"+POST.name+"' "+"של "+artist+" התווספו בהצלחה!");
+
+                }
+        });
+
     });
 
 }

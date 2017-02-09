@@ -2,8 +2,10 @@ function songShowController($scope, $routeParams, $http){
     var x;
     $scope.song=x;
     var name = ($routeParams.name || "");
+    var artistName = ($routeParams.artistName || "");
    // var artistName = ($routeParams.artistsName || "");
     console.log("name: " + name);
+    console.log("artistName: " + artistName);
     //console.log("artistName: " + artistName);
     $scope.onLoad=onLoad;
     console.log("in songShowController");
@@ -13,7 +15,12 @@ function songShowController($scope, $routeParams, $http){
     function onLoad(){
         $http.get('songsController/loadChords/'+name)
             .success(function(data){
-                $scope.song = data[0];
+                for(i in data)//sent the correct song of the specific artist
+                {
+                    if(data[i].artistsName==artistName)
+                      $scope.song = data[i];
+                }
+//*************************************************************************
                 console.log("Succeed loading");
                 console.log(data);
             })

@@ -47,6 +47,10 @@ myApp.config(function($routeProvider){
             templateUrl: "views/songShow.html",
             controller: "songShowController"
         })
+        .when('/addSongSuccess', {
+            templateUrl: "views/addSongSuccess.html",
+            controller: "addsongController"
+        })
 
         .otherwise({redirectTo:'/home'});
 });
