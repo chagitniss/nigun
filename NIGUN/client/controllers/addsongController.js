@@ -3,6 +3,22 @@ function addsongController($scope, $http) {
         $scope.lyrics = '';
         $scope.lines = [];
 
+        $scope.onLoad=onLoad;
+        onLoad();
+    //init select options from database
+    function onLoad() {
+        $http.get('artistsController/celectArtists')
+            .success(function (data) {
+                $scope.artists = data;
+                $scope.artists.sort();
+
+            })
+            .error(function (data) {
+                console.log("Error: " + data);
+            });
+    }
+
+
         $scope.lyricsToLines = function() {
             var text_lines = $scope.lyrics.split("\n");
             $scope.lines = [];
@@ -28,7 +44,8 @@ function addsongController($scope, $http) {
                 link : add.link,
                 lines : lines,
             });
-            console.log($scope.lines);
+           // console.log($scope.lines);
+            console.log(data);
             var config = {
                 headers : {
                     'Content-Type': 'application/x-www-form-urlencoded;charset=utf-8;'
