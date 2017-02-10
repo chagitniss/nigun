@@ -51,6 +51,10 @@ myApp.config(function($routeProvider){
             templateUrl: "views/addSongSuccess.html",
             controller: "addsongController"
         })
+        .when('/admin', {
+            templateUrl: "views/admin.html",
+            controller: "adminController"
+        })
 
         .otherwise({redirectTo:'/home'});
 });
@@ -60,3 +64,4 @@ myApp.controller("artistShowController", ["$scope",  "$routeParams", "$http", ar
 myApp.controller("songShowController", ["$scope",  "$routeParams", "$http", songShowController]);
 
 myApp.controller("addsongController", ["$scope", "$http", addsongController]);
+myApp.controller("adminController", ["$scope", "$http", adminController]);

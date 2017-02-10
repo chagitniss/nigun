@@ -1,0 +1,34 @@
+<div  id="admin" >
+    <div style="font-family: Arial">
+        <h1>דף מנהל</h1>
+
+        <h3>כל השירים הקיימים כרגע בדאתאבייס</h3>
+
+    </div>
+    </br>
+    </br>
+
+
+    <div ng-controller="adminController" class="container-fluid text-right">
+        <table>
+            <tr>
+                <th>שם שיר</th>
+                <th>שם אומן</th>
+                <th>סוג/ז'אנר</th>
+                <th>קישור יוטיוב</th>
+                <th>אקורדים</th>
+                <th> מחיקה</th>
+            </tr>
+            <tr ng-repeat="song in allSongs | orderBy : 'name'">
+                <td style="width: 15%">{{song.name}}</td>
+                <td style="width: 7%">{{song.artistsName}}</td>
+                <td style="width: 7%">{{song.type}}</td>
+                <td style="width: 30%">{{song.link}}</td>
+                <td ><div ng-repeat="line in song.lines">{{line.chords}}</br>{{line.words}}</div></td>
+                <td><input type="submit" value="מחק שיר מהמאגר" ng-click="deleteSong(song.name,song.artistsName)"></td>
+                <!--th><a ng-href="#/admin/classes/updateClass/{{class.ClassId}}">עדכון</a></--th-->
+            </tr>
+        </table>
+
+    </div>
+</div>

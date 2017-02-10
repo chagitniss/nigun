@@ -26,10 +26,45 @@ var songsList = mongoose.model('songs',songsSchema);
 router.get('/loadSongs/:name', loadSongs);
 router.get('/loadChords/:name', loadChords);
 router.post('/addsong', addsong);
+router.get('/loadAllSongs', loadAllSongs);
+router.post('/deleteSong', deleteSong);
 
 
 module.exports = router;
 
+//for admin page
+function loadAllSongs(req, res) {
+    console.log("in loadallsongs functiom");
+    //Getting all songs from database in songs array
+    songsList.find({}, function (err, all) {
+        if (err)
+            res.send(err);
+        //console.log(all);
+        res.json(all); // return the songs in JSON format
+    });
+}
+function deleteSong(req, res){
+    console.log("in delete server")
+    var body = '';
+    req.on('data', function (data) {
+        body += data;
+    });
+    req.on('end', function () {
+
+        var POST = qs.parse(body);
+        console.log(POST);
+        songsList.remove({'name': POST.name,'artistsName': POST.artistName},function(err, result) {
+            if (err) {
+                res.send(err);
+            }
+            console.log("song deleted");
+            res.send("האקורדים לשיר "+" '"+POST.name+"' "+"של "+POST.artistName+" נמחקו מהמאגר");
+        });
+    });
+}
+
+
+//*************************************************************************
 function loadSongs(req, res) {
     //Getting all songs from artist collection and put in songs array
     var name = req.params.name;
@@ -77,8 +112,8 @@ function addsong(req,res) {
                 res.send("אתה מנסה להוסיף אקורדים לשיר שכבר קיימים לו אקורדים במאגר.");
             }
             else {
-                var newSong = new songsList({name: POST.name, artistsName: artist, type:POST.name, link: POST.link, lines: parsLines});
-                //newSong.save();
+                var newSong = new songsList({name: POST.name, artistsName: artist, type:POST.type, link: POST.link, lines: parsLines});
+                newSong.save();
                 console.log(newSong.type);
                 console.log("song added");
                 res.send("האקורדים לשיר "+" '"+POST.name+"' "+"של "+artist+" התווספו בהצלחה!");
@@ -89,4 +124,7 @@ function addsong(req,res) {
     });
 
 }
+
+
+
 
