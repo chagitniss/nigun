@@ -38,8 +38,6 @@
     <script src="controllers/songShowController.js"></script>
     <script src="controllers/addsongController.js"></script>
     <script src="controllers/adminController.js"></script>
-    <script src="controllers/typeShowController.js"></script>
-
 
     <script src="app.js"></script>
 
@@ -67,12 +65,14 @@
 
             <div id="HeaderLettersContainer" class="col-lg-7 col-md-7 col-sm-7 col-xs-7 col-sm-12 hidden-xs ">
                 <div ng-controller="artistsController" id = "search" class="input-group" ><!--id="searchDiv"-->
-                    <input autocomplete="off" id="searchInput" name="id" type="text" class="form-control" placeholder="הקלד שם אמן לחיפוש"  />
+                    <input autocomplete="off" id="searchInput" ng-model="searchInputModel" type="text" class="form-control" placeholder="הקלד שם אמן לחיפוש"  />
                     <span class="input-group-btn  hidden-xs">
-                        <a ng-href="#/showSearch" ><button id="searchBtn" ng-click="onClickSearch()" class="btn btn-default" type="submit">חפש</button></a>
+                        <!--<a id="hrefSearch"  >ng-href=""#/showSearch-->
+                        <button id="searchBtn" ng-click="onClickSearch()" class="btn btn-default" type="submit">חפש</button>
+                        <!--</a>-->
                     </span>
                 </div>
-                </br></br>
+                <br/><br/>
                 <b> <a class = "char" href="">א</a>&nbsp&nbsp&nbsp
                     <a class = "char" href="">ב</a>&nbsp&nbsp&nbsp
                     <a class = "char" href="">ג</a>&nbsp&nbsp&nbsp
@@ -121,8 +121,8 @@
                 <div ng-view></div>
             </div>
 
-</div>
-</br>
+
+<br/>
 
 <footer class="container-fluid text-center">
     <div class="col-lg-4">כל הזכויות שמורות לניגון בע"מ &copy; </div>
