@@ -1,0 +1,8 @@
+<div class="container" id="title" >
+    <div style="font-family: Calibri" class="pull-right"><h2>אקורדים ל {{songs[0].type}}</h2></div>
+</div>
+<div ng-controller="typeShowController" class="container-fluid text-right">
+    <div id="songsList" ng-repeat="song in songs track by $index" class="col-lg-7 col-xs-9 pull-right">
+        <a ng-href="#/artists/{{song.artistsName}}/{{song.name}}" class="list-group-item">{{song.name}}</a>
+    </div>
+</div>

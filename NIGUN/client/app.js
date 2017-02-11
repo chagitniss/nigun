@@ -55,6 +55,11 @@ myApp.config(function($routeProvider){
             templateUrl: "views/admin.html",
             controller: "adminController"
         })
+        .when('/kategories/:name?', {
+            templateUrl: "views/typeShow.html",
+            controller: "typeShowController"
+        })
+
 
         .otherwise({redirectTo:'/home'});
 });
@@ -62,6 +67,7 @@ myApp.config(function($routeProvider){
 myApp.controller("artistsController", ["$scope", "$http", artistsController]);
 myApp.controller("artistShowController", ["$scope",  "$routeParams", "$http", artistShowController]);
 myApp.controller("songShowController", ["$scope",  "$routeParams", "$http", songShowController]);
-
+myApp.controller("typeShowController", ["$scope","$routeParams", "$http", typeShowController]);
 myApp.controller("addsongController", ["$scope", "$http", addsongController]);
 myApp.controller("adminController", ["$scope", "$http", adminController]);
+
