@@ -88,6 +88,17 @@ function loadType(req, res) {
     });
 }
 
+function loadSort(req, res) {
+    //Getting all songs from artist collection and put in songs array
+    var char = req.params.name;
+    songsList.find({}, function (err, songs) {
+        if (err)
+            res.send(err);
+        console.log(songs);
+        res.json(songs); // return the songs in JSON format
+    });
+}
+
 function loadChords(req, res) {
     //Getting song data from songs collection and put in songs array
     var name = req.params.name;
