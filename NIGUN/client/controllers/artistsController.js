@@ -55,6 +55,16 @@ console.log("in client ctrl");
 
         //alert($scope.artistsSearch[2].name);
     };
+    
+   //========================================לא גמור================ 
+        $scope.onClickCharSearch = function(e){   //search by the chars
+        var idEvent = e.target.text;
+        $scope.charSearch = idEvent;
+        //window.location = "#/charsSearch";
+         //e.target.attributes.href = "#/charsSearch";
+        //alert(idEvent);
+    };
+    
     //search ----- End
     //===========================================================
 }
