@@ -38,6 +38,7 @@ function addsongController($scope, $http) {
 
         $scope.uploadSong=function(add){
 
+           if (confirm('האם אתה בטוח שאתה רוצה להעלות את השיר?')){
 
            console.log($scope.lines);
            var lines = angular.toJson($scope.lines);
@@ -78,6 +79,7 @@ function addsongController($scope, $http) {
                         "<hr />headers: " + header +
                         "<hr />config: " + config;
                 });
+           }
         }
 
 
