@@ -2,7 +2,7 @@
     <div style="font-family: Calibri" class="pull-right"><h1>אקורדים לשירים של {{songs[0].artistsName}}:</h1></div>
 </div>
 <div ng-controller="artistShowController" class="container-fluid text-right">
-         <div id="songsList" ng-repeat="song in songs track by $index" class="col-lg-7 col-xs-9 pull-right">
+         <div  style="font-family: Calibri" id="songsList" ng-repeat="song in songs track by $index" class="col-lg-7 col-xs-9 pull-right">
              <a ng-href="#/artists/{{song.artistsName}}/{{song.name}}" class="list-group-item">{{song.name}}</a>
          </div>
 </div>
