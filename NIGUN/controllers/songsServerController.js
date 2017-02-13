@@ -127,7 +127,7 @@ function addsong(req,res) {
             else {
                 var newSong = new songsList({name: POST.name, artistsName: artist, type:POST.type, link: POST.link, lines: parsLines});
                 newSong.save();
-                console.log(newSong.type);
+
                 console.log("song added");
                 res.send("האקורדים לשיר "+" '"+POST.name+"' "+"של "+artist+" התווספו בהצלחה!");
 

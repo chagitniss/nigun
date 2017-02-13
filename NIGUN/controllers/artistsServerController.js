@@ -1,7 +1,7 @@
 var express = require('express');
 var router = express.Router();
 var config=require('../tsconfig.json');
-
+var qs = require('querystring');
 var mongoose = require ('mongoose');
 
 var db = mongoose.connection;
@@ -25,6 +25,7 @@ artistsList.find({},function(err,artists){
 
 router.get('/loadArtists', loadArtists);
 router.get('/celectArtists', celectArtists);
+router.post('/addArtist', addArtist);
 //router.get('/loadSongs/:name', loadSongs);
 
 
@@ -54,5 +55,31 @@ function celectArtists(req, res){
     artistsList.find({},'name',function(err,artists){
         //console.log(artists);
         res.json(artists);
+    });
+}
+//for admin
+function addArtist(req,res) {
+    var body = '';
+    req.on('data', function (data) {
+        body += data;
+    });
+
+    req.on('end', function () {
+        var POST = qs.parse(body);
+
+        artistsList.find({'name': POST.name}, function (err, artist) {
+            if (err)
+                res.send(err);
+            if(artist[0]!=null) {
+                console.log("artist already exist");
+                res.send("אתה מנסה להוסיף אמן שכבר קיים.");
+            }
+            else {
+            var newArtist = new artistsList({id: POST.id, name: POST.name, songs:POST.songs, img: POST.img});
+            newArtist.save();
+            console.log("artist added");
+                res.send("האומן "+POST.name+" התווסף בהצלחה!");
+             }
+        });
     });
 }

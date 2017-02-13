@@ -6,10 +6,12 @@ table {
     border-collapse: collapse;
     width: 100%;
 }
+#artistsTable{
+    width: 30%
+}
 
 td, th {
     border: 1px solid #dddddd;
     text-align: right;
     padding: 8px;
-
 }
