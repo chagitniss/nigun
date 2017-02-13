@@ -30,6 +30,7 @@ router.get('/loadAllSongs', loadAllSongs);
 router.post('/deleteSong', deleteSong);
 router.get('/loadType/:name', loadType);
 router.get('/loadSort/:name', loadSort);
+router.post('/loadSongByNames', loadSongByNames);
 
 
 module.exports = router;
@@ -63,6 +64,10 @@ function deleteSong(req, res){
             res.send("האקורדים לשיר "+" '"+POST.name+"' "+"של "+POST.artistName+" נמחקו מהמאגר");
         });
     });
+}
+function loadSongByNames(req, res) {
+
+
 }
 
 
