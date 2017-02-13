@@ -13,7 +13,7 @@ function sortShowController($scope, $routeParams, $http){
         $http.get('songsController/loadSort/'+name)
             .success(function(data){
                 console.log(data);
-                // $scope.songs = data;
+
                 $scope.songs = filter(data,0,name);
                 console.log("Succeed loading");
 
@@ -31,4 +31,6 @@ function sortShowController($scope, $routeParams, $http){
             document.getElementById("null").innerHTML = "לא קיימים שירים באות זאת";
         return filteredNames;
     }
+
 }
+
