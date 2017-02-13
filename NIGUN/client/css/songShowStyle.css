@@ -1,5 +1,5 @@
 #songRow {
-    padding: 30px;
+    padding-top: 30px;
     text-indent: 40px;
 }
 #songName{
@@ -7,16 +7,29 @@
     font-size: 15px;
 }
 #artistName{
-    font-family: Arial;
+    font-family: Calibri;
     font-size: 15px;
 }
 #chords{
+    font-family: Calibri;
+    font-size: 21px;
+    margin-right: 30px;
 
-    font-family: Arial;
-    font-size: 22px;
 }
 .fluid-width-video-wrapper{
     padding-top: 15.272%;
+    margin-left: 200px;
+
+}
+#youtubeContainer{
+    border-color: #4d0000;
+    border-style: dotted;
     margin-left: 100px;
+    height: 300px;
+    width: 300px;
+}
+#songImg{
+    height: 15px;
+    width: 15px;
 }
 
