@@ -66,8 +66,23 @@ function deleteSong(req, res){
     });
 }
 function loadSongByNames(req, res) {
+    console.log("in loadSongByNames")
+    var body = '';
+    req.on('data', function (data) {
+        body += data;
+    });
+    req.on('end', function () {
 
+        var POST = qs.parse(body);
+        console.log(POST);
+        songsList.find({'name':POST.name ,'artistsName': POST.artistName}, function (err, songs) {
+            if (err)
+                res.send(err);
+            console.log(songs);
+            res.json(songs); // return the songs in JSON format
+        });
 
+    });
 }
 
 
