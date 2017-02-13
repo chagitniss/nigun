@@ -1,6 +1,6 @@
 body{
     background-color:white;
-    direction: rtl;
+   direction: rtl;
 }
 #top{
     background-color: #800000;
@@ -63,13 +63,13 @@ body{
     margin-bottom: auto;
 }
 .top-nav ul li a {
-    display: block;
+   display: block;
     padding: 23.6px;
     font: bold 14px/16px "Arial";
     font-family: 'Open Sans', sans-serif;
     font-weight: normal;
     text-transform: uppercase;
-    transition: 0.5s ease;
+   transition: 0.5s ease;
     -o-transition: 0.5s ease;
     -webkit-transition: 0.5s ease;
 }
@@ -89,12 +89,16 @@ a {
     background-size:100%;
 
 }
-.list-group-item {
+.list-group-item> list-group-item:hover {
     opacity:0.8;
     border: none;
     background: #e6e6e6;
     margin: 1px 0;
     border-bottom: 1px dotted #c2c2c2;
+}
+ a.list-group-item:hover {
+  font-style: italic;
+     color: #4d0000;
 }
 #loginLink{
     margin-top:50px;
@@ -114,10 +118,11 @@ a {
     color:white;
 }
 
-.btn-search{
+
+#searchBtn{
     border-radius: 0px;
 }
-#searchDiv{
+#searchInput{
     border-radius: 0px;
 }
 
