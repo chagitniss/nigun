@@ -15,7 +15,7 @@ function typeShowController($scope, $routeParams, $http){
                 $scope.songs = data;
                 console.log("Succeed loading");
                 if(data[0]==null)
-                    document.getElementById("null").innerHTML = "לא קיימים שירים מסוג ז'אנר זה!";
+                    document.getElementById("null").innerHTML = "לא קיימים שירים מסוג ז'אנר זה :(";
                 console.log(data);
             })
             .error(function(data){
