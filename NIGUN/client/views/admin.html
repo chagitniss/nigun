@@ -1,6 +1,6 @@
 <div  id="admin" >
-    <div style="font-family: Arial">
-        <h1>דף מנהל</h1>
+
+        <h2>דף מנהל</h2>
 
         <h3>כל השירים הקיימים כרגע בדאתאבייס</h3>
 
@@ -10,7 +10,9 @@
 
 
     <div ng-controller="adminController" class="container-fluid text-right">
-        <table >
+
+        <table>
+
             <tr>
                 <th>שם שיר</th>
                 <th>שם אומן</th>
@@ -30,6 +32,7 @@
                 <td><a ng-href="#/admin/updateSong/{{song.artistsName}}/{{song.name}}">עדכן שיר</a></td>
             </tr>
         </table>
+
 </br>
 </br>
 </br>
@@ -70,15 +73,6 @@
                 <button type="submit" class="btn btn-danger form-control" ng-click="addArtist(addArtist)">הוסף אומן למאגר</button>
             </div>
         </form>
-
-
-    </div>
-
-
-
-
-
-
 
 
 

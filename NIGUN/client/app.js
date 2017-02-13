@@ -59,9 +59,15 @@ myApp.config(function($routeProvider){
             templateUrl: "views/typeShow.html",
             controller: "typeShowController"
         })
+
         .when('/admin/updateSong/:artistName/:name', {
             templateUrl: "views/updateSong.html",
             controller: "updateSongController"
+        })
+        .when('/char/:name?', {
+            templateUrl: "views/sortShow.html",
+            controller: "sortShowController"
+
         })
 
 
@@ -72,7 +78,11 @@ myApp.controller("artistsController", ["$scope", "$http", artistsController]);
 myApp.controller("artistShowController", ["$scope",  "$routeParams", "$http", artistShowController]);
 myApp.controller("songShowController", ["$scope",  "$routeParams", "$http", songShowController]);
 myApp.controller("typeShowController", ["$scope","$routeParams", "$http", typeShowController]);
+
 myApp.controller("updateSongController", ["$scope","$routeParams", "$http", updateSongController]);
+
+myApp.controller("sortShowController", ["$scope","$routeParams", "$http", sortShowController]);
+
 myApp.controller("addsongController", ["$scope", "$http", addsongController]);
 myApp.controller("adminController", ["$scope", "$http", adminController]);
 
