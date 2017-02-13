@@ -1,30 +1,26 @@
 <div ng-controller="songShowController" class="container-fluid text-right">
     <div class="row" id="songRow">
 
-        <div class="col-md-1 col-sm-4 col-lg-3 col-xs-12">
+        <div class="col-md-1 col-sm-4 col-lg-4 col-xs-12">
             <div id="youtubeContainer">
-                <a ng-href="{{song.link}}"><div id="youtubePlayer">לינק ליוטיוב</div></a>
-                 <div class="fluid-width-video-wrapper col-md-4 col-sm-4 col-lg-4 col-xs-12">
 
-                   <iframe width="854" height="480" ng-src="{{youtubeLink}}" frameborder="0" allowfullscreen></iframe>
+                    <iframe class="col-md-1 col-sm-4 col-lg-12 col-xs-12" width="300" height="300" ng-src="{{youtubeLink}}" frameborder="0" allowfullscreen></iframe>
 
-
-                </div>
             </div>
         </div>
 
-          <div class="col-md-5 col-sm-2 col-lg-9">
-        <a ng-href="#/artists/{{song.name}}">
-            <div class="img-ph">
-                <img ng-src="../img/{{song.img}}" alt="Image" height="50px" width="50px" >
-            </div>
-        </a>
-    </div>
+       <!-- <div class="col-md-5 col-sm-2 col-lg-3">
+            <a ng-href="#/artists/{{song.name}}">
+                <div class="img-ph">
+                    <img ng-src="../img/{{song.img}}" alt="Image" height="50px" width="50px" >
+                </div>
+            </a>
+        </div>-->
 
-        <div class="col-md-6 col-sm-2 col-lg-9">
+        <div id="textim" class="col-md-6 col-sm-2 col-lg-6">
 
             <div id="songHeader">
-               <div id="songName"><h2>{{song.name}}</h2></div>
+                <div id="songName"><h2>{{song.name}}</h2></div>
 
                 <div id="artistName"><h4><a ng-href="#/artists/{{song.artistsName}}">{{song.artistsName}}</a></h4></div>
                 <hr>
