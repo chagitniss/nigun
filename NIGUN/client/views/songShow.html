@@ -5,8 +5,10 @@
             <div id="youtubeContainer">
                 <a ng-href="{{song.link}}"><div id="youtubePlayer">לינק ליוטיוב</div></a>
                  <div class="fluid-width-video-wrapper col-md-4 col-sm-4 col-lg-4 col-xs-12">
-                    <iframe ng-src="https://www.youtube.com/embed/song.link" frameborder="0" allowfullscreen id="fitvid815086">
-                   </iframe>
+
+                   <iframe width="854" height="480" ng-src="{{youtubeLink}}" frameborder="0" allowfullscreen></iframe>
+
+
                 </div>
             </div>
         </div>
@@ -18,7 +20,7 @@
             </div>
         </a>
     </div>
-        
+
         <div class="col-md-6 col-sm-2 col-lg-9">
 
             <div id="songHeader">

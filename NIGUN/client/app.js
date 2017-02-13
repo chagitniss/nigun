@@ -76,7 +76,7 @@ myApp.config(function($routeProvider){
 
 myApp.controller("artistsController", ["$scope", "$http", artistsController]);
 myApp.controller("artistShowController", ["$scope",  "$routeParams", "$http", artistShowController]);
-myApp.controller("songShowController", ["$scope",  "$routeParams", "$http", songShowController]);
+myApp.controller("songShowController", ["$scope",  "$routeParams", "$http", "$sce", songShowController]);
 myApp.controller("typeShowController", ["$scope","$routeParams", "$http", typeShowController]);
 
 myApp.controller("updateSongController", ["$scope","$routeParams", "$http", updateSongController]);

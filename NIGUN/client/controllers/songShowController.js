@@ -1,4 +1,4 @@
-function songShowController($scope, $routeParams, $http){
+function songShowController($scope, $routeParams, $http, $sce){
     var x;
     $scope.song=x;
     var name = ($routeParams.name || "");
@@ -11,6 +11,8 @@ function songShowController($scope, $routeParams, $http){
     console.log("in songShowController");
     onLoad();
 
+    var baseUrl = "https://www.youtube.com/embed/"
+
 
 
     function onLoad(){
@@ -20,6 +22,8 @@ function songShowController($scope, $routeParams, $http){
                 {
                     if(data[i].artistsName==artistName)
                       $scope.song = data[i];
+                      var link = baseUrl + $scope.song.link;
+                      $scope.youtubeLink = $sce.trustAsResourceUrl(link);
                 }
 //*************************************************************************
                 console.log("Succeed loading");
@@ -39,3 +43,11 @@ function songShowController($scope, $routeParams, $http){
 
     }
 }
+
+// function AppCtrl($scope, $sce) {
+//     // ...
+//         $scope.setProject = function (id) {
+//               $scope.currentProject = $scope.projects[id];
+//                     $scope.currentProjectUrl = $sce.trustAsResourceUrl($scope.currentProject.url);
+//                         }
+//                         }
