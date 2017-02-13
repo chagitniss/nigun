@@ -19,6 +19,8 @@
     <link href="css/loginStyle.css" rel="stylesheet" media="screen">
     <link href="css/songShowStyle.css" rel="stylesheet" media="screen">
     <link href="css/adminStyle.css" rel="stylesheet" media="screen">
+    <link href="css/sortShowStyle.css" rel="stylesheet" media="screen">
+
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
@@ -62,45 +64,45 @@
              <div id = "login" class="col-lg-3 col-sm-3 col-xs-3 col-md-3">
                 <div class="navbar-collapse collapse list-inline" style="text-align:left">
                     <ul class="nav navbar-nav navbar-left  list-inline">
-                       <li><a style="font-size: 15px" class="btn-sm fontim" ng-href="#/login" id="loginLink">התחברות</a></li>
+                      <li style="font-family: Calibri"><a style="font-size: 15px" class="btn-sm" ng-href="#/login" id="loginLink">התחברות</a></li>
                         <li id="kav">|</li>
-                        <li><a style="font-size: 15px" class="btn-sm fontim" ng-href="#/register" id="registerLink">הרשמה</a></li>
+                        <li style="font-family: Calibri"><a style="font-size: 15px" class="btn-sm" ng-href="#/register" id="registerLink">הרשמה</a></li>
                     </ul>
                 </div>
             </div>
             
         <div id="HeaderLettersContainer" ng-controller="artistsController" class="col-lg-7 col-md-7 col-sm-7 col-xs-7 col-sm-12 hidden-xs ">
                 <div ng-controller="artistsController" id = "search" class="input-group" ><!--id="searchDiv"-->
-                    <input autocomplete="off" id="searchInput" ng-model="searchInputModel" type="text" class="form-control" placeholder="הקלד שם אמן או שיר לחיפוש"  />
+                  <input style="font-family: Calibri" autocomplete="off" id="searchInput" ng-model="searchInputModel" type="text" class="form-control" placeholder="הקלד שם אמן או שיר לחיפוש"  />
                     <span class="input-group-btn  hidden-xs">
                         <!--<a id="hrefSearch"  >ng-href=""#/showSearch-->
-                        <button id="searchBtn" ng-click="onClickSearch()" class="btn btn-default" type="submit">חפש</button>
+                        <button style="font-family: Calibri" id="searchBtn" ng-click="onClickSearch()" class="btn btn-default" type="submit">חפש</button>
                         <!--</a>-->
                     </span>
                 </div>
                 <br/><br/>
-                <b> <a calss = "char" href="#/char/א">א</a>&nbsp&nbsp&nbsp&nbsp&nbsp
-                    <a calss = "char" href="#/char/ב">ב</a>&nbsp&nbsp&nbsp&nbsp&nbsp
-                    <a calss = "char" href="#/char/ג">ג</a>&nbsp&nbsp&nbsp&nbsp&nbsp
-                    <a calss = "char" href="#/char/ד">ד</a>&nbsp&nbsp&nbsp&nbsp&nbsp
-                    <a calss = "char" href="#/char/ה">ה</a>&nbsp&nbsp&nbsp&nbsp&nbsp
-                    <a calss = "char" href="#/char/ו">ו</a>&nbsp&nbsp&nbsp&nbsp&nbsp
-                    <a calss = "char" href="#/char/ז">ז</a>&nbsp&nbsp&nbsp&nbsp&nbsp
-                    <a calss = "char" href="#/char/ח">ח</a>&nbsp&nbsp&nbsp&nbsp&nbsp
-                    <a calss = "char" href="#/char/ט">ט</a>&nbsp&nbsp&nbsp&nbsp&nbsp
-                    <a calss = "char" href="#/char/י">י</a>&nbsp&nbsp&nbsp&nbsp&nbsp
-                    <a calss = "char" href="#/char/כ">כ</a>&nbsp&nbsp&nbsp&nbsp&nbsp
-                    <a calss = "char" href="#/char/ל">ל</a>&nbsp&nbsp&nbsp&nbsp&nbsp
-                    <a calss = "char" href="#/char/מ">מ</a>&nbsp&nbsp&nbsp&nbsp&nbsp
-                    <a calss = "char" href="#/char/נ">נ</a>&nbsp&nbsp&nbsp&nbsp&nbsp
-                    <a calss = "char" href="#/char/ס">ס</a>&nbsp&nbsp&nbsp&nbsp&nbsp
-                    <a calss = "char" href="#/char/ע">ע</a>&nbsp&nbsp&nbsp&nbsp&nbsp
-                    <a calss = "char" href="#/char/פ">פ</a>&nbsp&nbsp&nbsp&nbsp&nbsp
-                    <a calss = "char" href="#/char/צ">צ</a>&nbsp&nbsp&nbsp&nbsp&nbsp
-                    <a calss = "char" href="#/char/ק">ק</a>&nbsp&nbsp&nbsp&nbsp&nbsp
-                    <a calss = "char" href="#/char/ר">ר</a>&nbsp&nbsp&nbsp&nbsp&nbsp
-                    <a calss = "char" href="#/char/ש">ש</a>&nbsp&nbsp&nbsp&nbsp&nbsp
-                    <a calss = "char" href="#/char/ת">ת</a></b>
+               <b> <a class = "char" href="#/char/א">א</a>&nbsp&nbsp&nbsp&nbsp&nbsp
+                    <a class = "char" href="#/char/ב">ב</a>&nbsp&nbsp&nbsp&nbsp&nbsp
+                    <a class = "char" href="#/char/ג">ג</a>&nbsp&nbsp&nbsp&nbsp&nbsp
+                    <a class = "char" href="#/char/ד">ד</a>&nbsp&nbsp&nbsp&nbsp&nbsp
+                    <a class = "char" href="#/char/ה">ה</a>&nbsp&nbsp&nbsp&nbsp&nbsp
+                    <a class = "char" href="#/char/ו">ו</a>&nbsp&nbsp&nbsp&nbsp&nbsp
+                    <a class = "char" href="#/char/ז">ז</a>&nbsp&nbsp&nbsp&nbsp&nbsp
+                    <a class = "char" href="#/char/ח">ח</a>&nbsp&nbsp&nbsp&nbsp&nbsp
+                    <a class = "char" href="#/char/ט">ט</a>&nbsp&nbsp&nbsp&nbsp&nbsp
+                    <a class = "char" href="#/char/י">י</a>&nbsp&nbsp&nbsp&nbsp&nbsp
+                    <a class = "char" href="#/char/כ">כ</a>&nbsp&nbsp&nbsp&nbsp&nbsp
+                    <a class = "char" href="#/char/ל">ל</a>&nbsp&nbsp&nbsp&nbsp&nbsp
+                    <a class = "char" href="#/char/מ">מ</a>&nbsp&nbsp&nbsp&nbsp&nbsp
+                    <a class = "char" href="#/char/נ">נ</a>&nbsp&nbsp&nbsp&nbsp&nbsp
+                    <a class = "char" href="#/char/ס">ס</a>&nbsp&nbsp&nbsp&nbsp&nbsp
+                    <a class = "char" href="#/char/ע">ע</a>&nbsp&nbsp&nbsp&nbsp&nbsp
+                    <a class = "char" href="#/char/פ">פ</a>&nbsp&nbsp&nbsp&nbsp&nbsp
+                    <a class = "char" href="#/char/צ">צ</a>&nbsp&nbsp&nbsp&nbsp&nbsp
+                    <a class = "char" href="#/char/ק">ק</a>&nbsp&nbsp&nbsp&nbsp&nbsp
+                    <a class = "char" href="#/char/ר">ר</a>&nbsp&nbsp&nbsp&nbsp&nbsp
+                    <a class = "char" href="#/char/ש">ש</a>&nbsp&nbsp&nbsp&nbsp&nbsp
+                    <a class = "char" href="#/char/ת">ת</a></b>
             </div>
             
             <div id = "headLogo" class="col-lg-2 col-md-2 col-sm-2 col-xs-2">

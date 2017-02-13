@@ -133,7 +133,10 @@ a {
 footer {
     background-color: #555;
     color: white;
-    padding: 15px;
+    padding: 10px ;
+ /*   position: absolute;*/
+    bottom: 0;
+    width: 100%;
 }
 .imgPoret{
     height:28px;
@@ -142,4 +145,15 @@ footer {
 }
 #fontim{
     font-family: "Calibri";
+}
+a.char{
+    font-size: 19px;
+    color: white;
+    text-decoration: none;
+}
+a.char:hover{
+    color:white;
+    text-decoration: none;
+    font-style: italic;
+
 }
