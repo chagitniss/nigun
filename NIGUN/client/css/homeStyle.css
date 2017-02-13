@@ -134,7 +134,7 @@ footer {
     background-color: #555;
     color: white;
     padding: 10px ;
-    position: absolute;
+ /*   position: absolute;*/
     bottom: 0;
     width: 100%;
 }
@@ -146,4 +146,14 @@ footer {
 #fontim{
     font-family: "Calibri";
 }
+a.char{
+    font-size: 19px;
+    color: white;
+    text-decoration: none;
+}
+a.char:hover{
+    color:white;
+    text-decoration: none;
+    font-style: italic;
 
+}
