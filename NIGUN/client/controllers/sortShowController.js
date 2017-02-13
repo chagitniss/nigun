@@ -28,7 +28,7 @@ function sortShowController($scope, $routeParams, $http){
             return word.name.charAt(index) === letter;
         });
         if(filteredNames[0]==null)
-            document.getElementById("null").innerHTML = "לא קיימים שירים באות זאת!";
+            document.getElementById("null").innerHTML = "לא קיימים שירים באות זאת :(";
         return filteredNames;
     }
 
