@@ -148,6 +148,13 @@ function addsong(req,res) {
         console.log(parsLines);
         var lines=[];
 
+
+
+
+        var link=getId(POST.link);
+
+
+
         //validation and save in database
         songsList.find({'name': POST.name,'artistsName': artist}, function (err, song) {
             if (err)
@@ -157,7 +164,7 @@ function addsong(req,res) {
                 res.send("אתה מנסה להוסיף אקורדים לשיר שכבר קיימים לו אקורדים במאגר.");
             }
             else {
-                var newSong = new songsList({name: POST.name, artistsName: artist, type:POST.type, link: POST.link, lines: parsLines});
+                var newSong = new songsList({name: POST.name, artistsName: artist, type:link, link: POST.link, lines: parsLines});
                 newSong.save();
 
                 console.log("song added");
@@ -168,6 +175,18 @@ function addsong(req,res) {
 
     });
 
+}
+
+
+function getId(url) {
+    var regExp = /^.*(youtu.be\/|v\/|u\/\w\/|embed\/|watch\?v=|\&v=)([^#\&\?]*).*/;
+    var match = url.match(regExp);
+
+    if (match && match[2].length == 11) {
+        return match[2];
+    } else {
+        return 'error';
+    }
 }
 
 
