@@ -4,7 +4,6 @@ function addsongController($scope, $http) {
 
         $scope.lyrics = '';
         $scope.lines = [];
-
         $scope.artists={};
         $scope.onLoad=onLoad;
         onLoad();
@@ -70,6 +69,7 @@ function addsongController($scope, $http) {
                     console.log("Succeed post addsong");
                     console.log(data);
                     alert(data);
+                    window.location = "/#";
 
 
                 })

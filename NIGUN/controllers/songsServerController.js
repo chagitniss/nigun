@@ -26,6 +26,7 @@ var songsList = mongoose.model('songs',songsSchema);
 router.get('/loadSongs/:name', loadSongs);
 router.get('/loadChords/:name', loadChords);
 router.post('/addsong', addsong);
+router.post('/updateSong', updateSong);
 router.get('/loadAllSongs', loadAllSongs);
 router.post('/deleteSong', deleteSong);
 router.get('/loadType/:name', loadType);
@@ -84,7 +85,37 @@ function loadSongByNames(req, res) {
 
     });
 }
+function updateSong(req, res){
+    console.log("in updateSong server");
+    var body = '';
+    req.on('data', function (data) {
+        body += data;
+    });
 
+    req.on('end', function () {
+        var POST = qs.parse(body);
+
+        var parsLines=JSON.parse(POST.lines);
+        console.log(parsLines);
+        var lines=[];
+
+        var link=getId(POST.link);//edit youtube ling by help function
+
+        //remoove exist song
+        songsList.remove({'name': POST.name,'artistsName': POST.artistName},function(err, result) {
+            if (err) {
+                res.send(err);
+            }
+            console.log("song deleted");
+        });
+
+        //add new song
+            var newSong = new songsList({name: POST.name, artistsName: POST.artistName, type:POST.type, link: link, lines: parsLines});
+            newSong.save();
+            console.log("song added");
+            res.send("האקורדים לשיר "+" '"+POST.name+"' "+"של "+POST.artistName+" התעדכנו בהצלחה!");
+    });
+}
 
 //*************************************************************************
 function loadSongs(req, res) {
@@ -148,12 +179,7 @@ function addsong(req,res) {
         console.log(parsLines);
         var lines=[];
 
-
-
-
-        var link=getId(POST.link);
-
-
+        var link=getId(POST.link);//edit youtube ling by help function
 
         //validation and save in database
         songsList.find({'name': POST.name,'artistsName': artist}, function (err, song) {
@@ -177,7 +203,7 @@ function addsong(req,res) {
 
 }
 
-
+//manage youtube link
 function getId(url) {
     var regExp = /^.*(youtu.be\/|v\/|u\/\w\/|embed\/|watch\?v=|\&v=)([^#\&\?]*).*/;
     var match = url.match(regExp);
@@ -188,6 +214,7 @@ function getId(url) {
         return 'error';
     }
 }
+
 
 
 
