@@ -29,6 +29,7 @@ router.post('/addsong', addsong);
 router.get('/loadAllSongs', loadAllSongs);
 router.post('/deleteSong', deleteSong);
 router.get('/loadType/:name', loadType);
+router.get('/loadSort/:name', loadSort);
 
 
 module.exports = router;
