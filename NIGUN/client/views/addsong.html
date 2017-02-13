@@ -57,7 +57,7 @@
                         <label>הכנס אקורדים מעל כל שורת מילים:</label>
 
                         <div ng-repeat="line in lines">
-                            <input type="text" ng-model="line.chords" />
+                            <input type="text" ng-model="line.chords" ng-change="chek()"/>
                             </br>
                             <label >{{line.words}}</label>
                             </br>

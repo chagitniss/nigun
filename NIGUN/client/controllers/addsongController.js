@@ -35,6 +35,13 @@ function addsongController($scope, $http) {
         }
 
 
+    $scope.chek = function() {
+        var lines = angular.toJson($scope.lines);
+        console.log(lines);
+        console.log(lines.chords);
+        if(lines[0].chords)
+            alert("t");
+    }
 
         $scope.uploadSong=function(add){
 
