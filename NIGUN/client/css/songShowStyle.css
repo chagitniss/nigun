@@ -23,10 +23,9 @@
 }
 #youtubeContainer{
     border-color: #4d0000;
-    border-style: dotted;
-    margin-left: 100px;
+    border-style: none;
     height: 300px;
-    width: 300px;
+    width: 400px;
 }
 #songImg{
     height: 15px;
