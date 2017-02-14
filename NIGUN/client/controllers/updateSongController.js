@@ -14,6 +14,16 @@ function updateSongController($scope,$routeParams, $http) {
 
 
     function onLoad() {
+        $http.get('artistsController/celectArtists')
+            .success(function (data) {
+                $scope.artists = data;
+                $scope.artists.sort();
+
+            })
+            .error(function (data) {
+                console.log("Error: " + data);
+            });
+
         var data = $.param({
             name: name,
             artistName: artistName,
