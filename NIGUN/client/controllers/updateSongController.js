@@ -50,7 +50,9 @@ function updateSongController($scope,$routeParams, $http) {
             line_object.words = text_line
             line_object.chords = ''
             $scope.lines.push(line_object);
+
         });
+        console.log($scope.lines);
     }
     //*******************************************************************************
     $scope.updateSong=function(add) {
