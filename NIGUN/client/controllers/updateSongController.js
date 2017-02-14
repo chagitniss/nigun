@@ -96,6 +96,7 @@ function updateSongController($scope,$routeParams, $http) {
                     console.log("Succeed post addsong");
                     console.log(data);
                     alert(data);
+                    window.location = "/#";
 
 
                 })
