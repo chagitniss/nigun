@@ -30,4 +30,4 @@ Please visit our wiki for furthur project info:
 - [Iteration 2](https://github.com/chagitniss/nigun/wiki/Iteration-2)
 - [Iteration 3](https://github.com/chagitniss/nigun/wiki/Iteration-3)
 - [Iteration 4](https://github.com/chagitniss/nigun/wiki/Iteration-4)
-- [Iteration 5-final!!](https://github.com/chagitniss/nigun/wiki/Iteration-5-final!!)
+- [Iteration 5-final!!](https://github.com/chagitniss/nigun/wiki/Iteration-5---Final!!)
