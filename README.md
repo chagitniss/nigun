@@ -1,11 +1,11 @@
-###NIGUN
+NIGUN
 
 ### Website for promoting the issue of Jewish music on the network.
-###Pleas visit our [live aplication]()(-not working yet, come back soon!)
+Pleas visit our [live aplication]()(-not working yet, come back soon!)
 
 ### [our chat](https://gitter.im/jce-il-se-class-2017a-nigun/Lobby?source=orgpage)
 
-###[Issue Board](https://github.com/chagitniss/nigun/projects/1)
+[Issue Board](https://github.com/chagitniss/nigun/projects/1)
 
 ### Disclaimer
 This project is developed as part of the requirements for a [software engineering course](//https://github.com/jce-il/se-class-materials) at the software engineering department - [Azrieli College of Engineering](http://www.jce.ac.il/), Jerusalem, Israel.
