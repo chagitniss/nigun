@@ -1,7 +1,7 @@
 NIGUN
 
 ### Website for promoting the issue of Jewish music on the network.
-Pleas visit our [live aplication]()(-not working yet, come back soon!)
+Pleas visit our [live aplication](https://github.com/chagitniss/nigun/blob/master/NIGUN/client/views/home.html)(-not working yet, come back soon!)
 
 ### [our chat](https://gitter.im/jce-il-se-class-2017a-nigun/Lobby?source=orgpage)
 
